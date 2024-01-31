@@ -1,0 +1,71 @@
+{
+  "type": "header",
+  "name": "t:sections.header-group.name",
+  "sections": {
+    "announcement": {
+      "type": "announcement",
+      "blocks": {
+        "announcement-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "FREE SHIPPING ON ALL ORDERS!",
+            "link_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement-0"
+      ],
+      "settings": {
+        "announcement_compact": true
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "header-0": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/fds_logo_c5736bf2-44c1-4fa0-86f9-5fe6cd486e93.png",
+            "desktop_logo_width": 100,
+            "mobile_logo_width": 90
+          }
+        }
+      },
+      "block_order": [
+        "header-0"
+      ],
+      "custom_css": [
+        ".site-header {padding: 0px;}",
+        ".toolbar {border: none; background: #f6f6f6;}",
+        ".site-nav__link img {display: none;}",
+        "#phone-number {display: none;}",
+        ".toolbar__item {font-size: 14px;}",
+        "img {height: 75px; width: 75px;}",
+        ".site-navigation a {font-size: 13px; padding-right: 8px;}",
+        ".site-nav__icons {margin-right: 15px;}",
+        ".site-header {box-shadow: none;}",
+        "@media (min-width: 1100px) {.site-nav__icons a .icon__fallback-text {display: inline-block; padding-left: 5px; position: unset; overflow: unset; width: unset; height: unset; }}"
+      ],
+      "settings": {
+        "main_menu_link_list": "main-menu",
+        "hover_menu": true,
+        "mega_menu_images": false,
+        "main_menu_alignment": "left",
+        "header_style": "normal",
+        "sticky_index": false,
+        "sticky_collection": false,
+        "toolbar_menu": "store-menu",
+        "toolbar_social": false,
+        "show_locale_selector": false,
+        "show_currency_selector": false,
+        "show_currency_flags": false
+      }
+    }
+  },
+  "order": [
+    "announcement",
+    "header"
+  ]
+}

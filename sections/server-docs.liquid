@@ -1,0 +1,19 @@
+<div id="server-docs-page" class="page-width page-content">
+    {%if customer.tags contains 'Admin'%}
+ 
+       <div id="server-docs-root"></div>
+       <script src="{{ 'server-docs.bundle.min.js' | asset_url }}"></script>
+ 
+    {%else%}
+ 
+         <div class="grid">
+          <div class="grid__item medium-up--three-quarters medium-up--push-one-eighth">
+             <div class="rte rte--nomargin">
+                {{ pages.no-access.content }}
+             </div>
+          </div>
+       </div>
+ 
+    {%endif%}
+ 
+ </div>

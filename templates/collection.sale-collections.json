@@ -1,0 +1,148 @@
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": true,
+        "collection_image_enable": false,
+        "parallax": false
+      }
+    },
+    "2a1f9c63-b960-44bf-8577-4634d9d7feba": {
+      "type": "slideshow",
+      "blocks": {
+        "template--14541078659107__2a1f9c63-b960-44bf-8577-4634d9d7feba-1686926059559a0eee-0": {
+          "type": "image",
+          "settings": {
+            "top_subheading": "",
+            "title": "",
+            "title_size": 80,
+            "subheading": "",
+            "link": "",
+            "link_text": "",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "image": "shopify:\/\/shop_images\/Everyday_Staples_Desktop_1.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Everyday_Staples_Mobile_1.jpg",
+            "overlay_opacity": 0
+          }
+        },
+        "template--14541078659107__2a1f9c63-b960-44bf-8577-4634d9d7feba-1686926059559a0eee-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "top_subheading": "",
+            "title": "Two line\ntitle slide.",
+            "title_size": 80,
+            "subheading": "And big, beautiful imagery",
+            "link": "",
+            "link_text": "Optional button",
+            "link_2": "",
+            "link_text_2": "",
+            "color_accent": "rgba(0,0,0,0)",
+            "text_align": "vertical-center horizontal-center",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "template--14541078659107__2a1f9c63-b960-44bf-8577-4634d9d7feba-1686926059559a0eee-0",
+        "template--14541078659107__2a1f9c63-b960-44bf-8577-4634d9d7feba-1686926059559a0eee-1"
+      ],
+      "custom_css": [],
+      "settings": {
+        "section_height": "450px",
+        "mobile_height": "auto",
+        "parallax": false,
+        "style": "bars",
+        "autoplay": true,
+        "autoplay_speed": 5
+      }
+    },
+    "promo-grid": {
+      "type": "promo-grid",
+      "blocks": {
+        "banner": {
+          "type": "banner",
+          "settings": {
+            "heading": "Need cups now?",
+            "text": "Never run out of stock again when you can control your own inventory. Get a free quote!",
+            "link": "shopify:\/\/pages\/custom-branding",
+            "label": "Learn More",
+            "color_tint": "#26bfcb",
+            "color_tint_opacity": 16,
+            "framed": false
+          }
+        },
+        "9e96bcc8-5427-4a3a-b0f1-f5dce98722d6": {
+          "type": "banner",
+          "disabled": true,
+          "settings": {
+            "heading": "20% off EVERYTHING (Including Custom)",
+            "text": "Just enter the discount code: 20ALL",
+            "link": "",
+            "label": "",
+            "color_tint": "#26bfcb",
+            "color_tint_opacity": 16,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "banner",
+        "9e96bcc8-5427-4a3a-b0f1-f5dce98722d6"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "subcollections": {
+          "type": "subcollections",
+          "disabled": true,
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 4,
+            "rows_per_page": 20,
+            "mobile_flush_grid": false
+          }
+        },
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "subcollections",
+        "product_grid",
+        "collection_description"
+      ],
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": false,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": false
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "2a1f9c63-b960-44bf-8577-4634d9d7feba",
+    "promo-grid",
+    "main-collection"
+  ]
+}

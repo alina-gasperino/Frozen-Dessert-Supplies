@@ -1,0 +1,69 @@
+{
+  "sections": {
+    "main": {
+      "type": "article-template",
+      "settings": {
+        "image_hero": false,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "social_sharing_blog": true
+      }
+    },
+    "26a3690d-5ede-4ede-b454-33486606febb": {
+      "type": "faq",
+      "blocks": {
+        "template--14683521843235__26a3690d-5ede-4ede-b454-33486606febb-question-1": {
+          "type": "question",
+          "settings": {
+            "title": "Why Frozen Dessert Supplies?",
+            "text": "<p>Our purpose at Frozen Dessert Supplies is \"Build People and Deliver Joy.\" That means that everything we do, from manufacturing to packaging to delivery, is to build you and your business and deliver joy to you. We also strive to build our employees and help them to be better people.<\/p>"
+          }
+        },
+        "template--14683521843235__26a3690d-5ede-4ede-b454-33486606febb-question-2": {
+          "type": "question",
+          "settings": {
+            "title": "What are your product made from?",
+            "text": "<p>Our paper ice cream cups are made with<strong>FDA approved food-safe paper<\/strong>coated in a thin layer of<strong>PE (Polyethylene)<\/strong>. Our clear plastic cups, banana split boats, and plastic dome lids are made from<strong>PET (Polyethylene Terephthalate)<\/strong>. Our plastic spoons and straws are made from<strong>PP (Polypropylene)<\/strong>. Our eco-friendly ice cream cups are made from<strong>FDA approved food-safe paper<\/strong>coated in a thin layer of<strong>PLA (Polylactic Acid)<\/strong>. PLA is plastic made from corn starch. Our eco-friendly spoons are also made from PLA. Our eco-friendly wooden spoons are made from FDA approved<strong>smooth birch wood<\/strong>.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14683521843235__26a3690d-5ede-4ede-b454-33486606febb-question-1",
+        "template--14683521843235__26a3690d-5ede-4ede-b454-33486606febb-question-2"
+      ],
+      "custom_css": [
+        "header {margin-top: auto; margin-bottom: auto; margin-right: 1rem; margin-left: -1rem;}",
+        "@media (min-width: 769px) {div {display: grid; grid-template-rows: auto auto; grid-template-columns: auto auto; column-gap: 2rem; } div > header {grid-column: 1 \/ -1; margin-bottom: 1rem; }}",
+        "div > div {width: 100%; margin-right: 0;}",
+        "div > div > div > button > :nth-child(2) {display: block; width: 14rem;}",
+        "div > div > div {display: flex; flex-direction: column;}",
+        "div > div > div > div {width: 100%; padding-left: 0.5rem;}"
+      ],
+      "settings": {
+        "title": "FAQs"
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "You may also like",
+        "blog": "news",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "26a3690d-5ede-4ede-b454-33486606febb",
+    "blog-posts"
+  ]
+}

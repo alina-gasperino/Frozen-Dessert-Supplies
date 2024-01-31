@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main": {
+      "type": "our-story",
+      "custom_css": [
+        ".btn {display: none;}"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

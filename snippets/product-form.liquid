@@ -1,0 +1,127 @@
+{%- form 'product', product, id: form_id, class: 'product-single__form' -%}
+
+  {%- liquid
+    assign gift_card_recipient_feature_active = false
+    if block.settings.show_gift_card_recipient and product.gift_card?
+      assign gift_card_recipient_feature_active = true
+    endif
+
+    assign enable_dynamic_buttons = false
+    if show_dynamic_checkout and template != 'product.preorder' and gift_card_recipient_feature_active == false
+      assign enable_dynamic_buttons = true
+    endif
+  -%}
+
+  {%- if gift_card_recipient_feature_active -%}
+    {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
+  {%- endif -%}
+
+  {%- if enable_dynamic_buttons -%}
+    <div class="payment-buttons">
+  {%- endif -%}
+
+  <!-- PreOrder Logic -->
+  {%- assign preorder = false -%}
+  {%- for variant in product.variants -%}
+    {%- assign purchasedInventory = variant.inventory_quantity | times: 1 -%}
+    {%- if variant.incoming == true and variant.inventory_policy == 'continue' and variant.inventory_quantity <= 0 -%}
+      {%- assign preorder = true -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {% assign preorder = false %}
+  {% for tag in product.tags %}
+    {% if tag contains 'Incoming Inventory: ' %}
+      {% assign taggedInventoryArray = tag | split: ':' %}
+      {% assign incomingInventory = taggedInventoryArray[1] | strip %}
+      {% assign incomingInventory = incomingInventory | times: 1 %}
+    {% elsif tag contains 'Set To Preorder: ' %}
+      {% assign incomingDateArray = tag | split: ':' %}
+      {% assign incomingInventoryDate = incomingDateArray[1] | strip %}
+      {% assign incomingInventoryDate = incomingInventoryDate | times: 1 %}
+      {% assign preorder = true %}
+    {% endif %}
+  {% endfor %}
+
+  {% if incomingInventory %}
+    {% assign incomingInventory = incomingInventory %}
+  {% else %}
+    {% assign incomingInventory = 0 %}
+  {% endif %}
+
+  {% assign preOrderAvailable = incomingInventory | plus: purchasedInventory %}
+  <!-- End PreOrder Logic -->
+
+  {%- liquid
+    assign default_text = 'products.product.add_to_cart' | t
+    assign button_text = 'products.product.add_to_cart' | t
+
+    if preorder
+      assign default_text = 'products.product.preorder' | t
+      assign button_text = 'products.product.preorder' | t
+    endif
+
+    unless current_variant.available
+      assign button_text = 'products.product.sold_out' | t
+    endunless
+  -%}
+
+    
+    <!-- Adding JavaScript for console.log -->
+    <!-- Commented out console.logs:
+      <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+          // 🟢 Convert the Liquid variable to a JSON string for JavaScript
+          var currentVariant = {{ current_variant | json }};
+          // 🟢 Log the current_variant
+          console.log('Current Variant:', currentVariant);
+          // 🟢 Convert the Liquid variable to a JSON string for JavaScript
+          var currentProduct = {{ product | json }};
+          // 🟢 Log the current_variant
+          console.log('Current Product:', currentProduct);
+          console.log('Preorder {%- if product.tags contains 'Set To Preorder'-%} Yes {%- endif -%}');
+          console.log('Variant Policy: {{currentVariant.inventory_policy}}')
+          console.log('Variant Quantity: {{currentVariant.inventory_quantity}}')
+          console.log("Incoming inv {{preOrderAvailable}}");
+      });
+      </script>
+    -->
+
+    <button
+      {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}
+      name="add"
+      data-add-to-cart
+      class="btn btn--full add-to-cart{% if enable_dynamic_buttons and product.selling_plan_groups == empty %} btn--secondary{% endif %}"
+      {% unless current_variant.available %} disabled="disabled"{% endunless %}
+      {%- if preorder -%}style="background: #008ea0;"{%- endif -%}>
+      <span data-add-to-cart-text data-default-text="{{ default_text }}">
+        {{ button_text }}
+      </span>
+    </button>
+
+    {%- if enable_dynamic_buttons -%}
+      {{ form | payment_button }}
+    {%- endif -%}
+
+  {%- if enable_dynamic_buttons -%}
+    </div>
+  {%- endif -%}
+
+  <div class="shopify-payment-terms product__policies">{{ form | payment_terms }}</div>
+
+  <select name="id" data-product-select class="product-single__variants no-js">
+    {%- for variant in product.variants -%}
+      {%- if variant.available -%}
+        <option {% if variant == product.selected_or_first_available_variant %}
+          selected="selected"{% endif %}
+          value="{{ variant.id }}">
+          {{ variant.title }} - {{ variant.price | money_with_currency }}
+        </option>
+      {%- else -%}
+        <option disabled="disabled">
+          {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+        </option>
+      {%- endif -%}
+    {%- endfor -%}
+  </select>
+{%- endform -%}

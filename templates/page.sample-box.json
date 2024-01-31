@@ -1,0 +1,113 @@
+{
+  "sections": {
+    "c6b5135f-ab0c-4985-b4c9-71e3015d1128": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14152949858339__c6b5135f-ab0c-4985-b4c9-71e3015d1128-168555746762ba019c-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Welcome To Your Sample Box"
+          }
+        },
+        "template--14152949858339__c6b5135f-ab0c-4985-b4c9-71e3015d1128-168555746762ba019c-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>We are so happy you're here! Below you will find what is included in the sample box.<br\/>       Sample boxes are not currently customizable but you will find everything you need is included. <br\/>       Get a feel of our products for a small fee of $5.00 to cover shipping. We're so excited for<br\/>        you to meet our products.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14152949858339__c6b5135f-ab0c-4985-b4c9-71e3015d1128-168555746762ba019c-0",
+        "template--14152949858339__c6b5135f-ab0c-4985-b4c9-71e3015d1128-168555746762ba019c-1"
+      ],
+      "custom_css": [
+        "h2 {font-size: 48px; color: hotpink; margin-top: -10px;}",
+        "p {font-size: 18px;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "0250ed67-749b-4937-820b-049b311f0524": {
+      "type": "featured-product",
+      "blocks": {
+        "template--14152949858339__0250ed67-749b-4937-820b-049b311f0524-1685557368d9e89889-0": {
+          "type": "price",
+          "settings": {}
+        },
+        "template--14152949858339__0250ed67-749b-4937-820b-049b311f0524-1685557368d9e89889-1": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "template--14152949858339__0250ed67-749b-4937-820b-049b311f0524-1685557368d9e89889-2": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": false
+          }
+        },
+        "template--14152949858339__0250ed67-749b-4937-820b-049b311f0524-1685557368d9e89889-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true
+          }
+        }
+      },
+      "block_order": [
+        "template--14152949858339__0250ed67-749b-4937-820b-049b311f0524-1685557368d9e89889-0",
+        "template--14152949858339__0250ed67-749b-4937-820b-049b311f0524-1685557368d9e89889-1",
+        "template--14152949858339__0250ed67-749b-4937-820b-049b311f0524-1685557368d9e89889-2",
+        "template--14152949858339__0250ed67-749b-4937-820b-049b311f0524-1685557368d9e89889-3"
+      ],
+      "settings": {
+        "featured_product": "free-sample",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "9a9632f5-d2f4-431e-bad9-a0bff9d7323d": {
+      "type": "background-image-text",
+      "settings": {
+        "subtitle": "",
+        "title": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "image": "shopify:\/\/shop_images\/ice-cream-gb4063796a_1280.jpg",
+        "layout": "left",
+        "height": 450,
+        "framed": false,
+        "parallax": false
+      }
+    },
+    "main": {
+      "type": "sample-box",
+      "disabled": true,
+      "custom_css": [
+        "#sample-box {display: none;}"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "c6b5135f-ab0c-4985-b4c9-71e3015d1128",
+    "0250ed67-749b-4937-820b-049b311f0524",
+    "9a9632f5-d2f4-431e-bad9-a0bff9d7323d",
+    "main"
+  ]
+}

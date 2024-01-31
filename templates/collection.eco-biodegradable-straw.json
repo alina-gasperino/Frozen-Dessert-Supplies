@@ -1,0 +1,125 @@
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "custom_css": [
+        "h1 {font-size: 48px; font-weight: bold;}"
+      ],
+      "settings": {
+        "enable": true,
+        "collection_image_enable": false,
+        "parallax": false
+      }
+    },
+    "promo-grid": {
+      "type": "promo-grid",
+      "blocks": {
+        "banner": {
+          "type": "banner",
+          "settings": {
+            "heading": "Need cups now?",
+            "text": "Never run out of stock again when you can control your own inventory. Get a free quote!",
+            "link": "shopify:\/\/pages\/custom-branding",
+            "label": "Learn More",
+            "color_tint": "#26bfcb",
+            "color_tint_opacity": 16,
+            "framed": false
+          }
+        },
+        "9e96bcc8-5427-4a3a-b0f1-f5dce98722d6": {
+          "type": "banner",
+          "disabled": true,
+          "settings": {
+            "heading": "20% off EVERYTHING (Including Custom)",
+            "text": "Just enter the discount code: 20ALL",
+            "link": "",
+            "label": "",
+            "color_tint": "#26bfcb",
+            "color_tint_opacity": 16,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "banner",
+        "9e96bcc8-5427-4a3a-b0f1-f5dce98722d6"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": false
+      }
+    },
+    "46f984a1-4c5f-4dee-91af-33f613ef17f2": {
+      "type": "rich-text",
+      "blocks": {
+        "template--14577112317987__46f984a1-4c5f-4dee-91af-33f613ef17f2-heading-1": {
+          "type": "heading",
+          "settings": {
+            "title": "Biodegradable Paper Straws| A Great Alternative to plastic straws"
+          }
+        },
+        "template--14577112317987__46f984a1-4c5f-4dee-91af-33f613ef17f2-text-1": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>Compostable drinking paper straws that are made from corn-strach and sugar cane. Durable and sturdy what are available in one standard size. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14577112317987__46f984a1-4c5f-4dee-91af-33f613ef17f2-heading-1",
+        "template--14577112317987__46f984a1-4c5f-4dee-91af-33f613ef17f2-text-1"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "subcollections": {
+          "type": "subcollections",
+          "disabled": true,
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 4,
+            "rows_per_page": 20,
+            "mobile_flush_grid": false
+          }
+        },
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "subcollections",
+        "product_grid",
+        "collection_description"
+      ],
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": false,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": false
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "promo-grid",
+    "46f984a1-4c5f-4dee-91af-33f613ef17f2",
+    "main-collection"
+  ]
+}

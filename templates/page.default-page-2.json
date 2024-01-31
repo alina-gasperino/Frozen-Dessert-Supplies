@@ -1,0 +1,45 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "c9a1eb9a-78c1-4f41-89df-3566571452ad": {
+      "type": "hero-video",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "title_size": 80,
+        "subheading": "",
+        "link_text": "",
+        "link": "",
+        "color_accent": "rgba(0,0,0,0)",
+        "text_align": "vertical-center horizontal-center",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=nDty9jbo_q8",
+        "overlay_opacity": 0,
+        "section_height": "650px",
+        "mobile_height": "auto"
+      }
+    },
+    "bb0d25e8-b34a-4ffe-bf0c-c89b8b12b8d4": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "Blog posts",
+        "blog": "news",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c9a1eb9a-78c1-4f41-89df-3566571452ad",
+    "bb0d25e8-b34a-4ffe-bf0c-c89b8b12b8d4"
+  ]
+}

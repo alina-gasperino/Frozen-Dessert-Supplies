@@ -1,0 +1,67 @@
+{
+  "sections": {
+    "main": {
+      "type": "article-template",
+      "settings": {
+        "image_hero": false,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "social_sharing_blog": true
+      }
+    },
+    "26a3690d-5ede-4ede-b454-33486606febb": {
+      "type": "faq",
+      "blocks": {
+        "template--14683521843235__26a3690d-5ede-4ede-b454-33486606febb-question-1": {
+          "type": "question",
+          "settings": {
+            "title": "What are common prom foods?",
+            "text": "<p>Delight your pre-prom guests with an exquisite spread featuring delectable caprese skewers, an assortment of finger-friendly sliders, and a tantalizing fruit and cheese platter.<\/p>"
+          }
+        },
+        "template--14683521843235__26a3690d-5ede-4ede-b454-33486606febb-question-2": {
+          "type": "question",
+          "settings": {
+            "title": "What are popular prom ice creams?",
+            "text": "<p>At prom, indulge in popular ice cream choices like timeless vanilla, rich chocolate, and refreshing strawberry, or opt for the classic allure of cookies and cream, the coolness of mint chocolate chip, or the nutty richness of butter pecan.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14683521843235__26a3690d-5ede-4ede-b454-33486606febb-question-1",
+        "template--14683521843235__26a3690d-5ede-4ede-b454-33486606febb-question-2"
+      ],
+      "custom_css": [
+        "header {margin-top: auto; margin-bottom: auto; margin-right: 1rem; margin-left: -1rem;}",
+        "div {display: flex;}",
+        "div > div > div > button > :nth-child(2) {display: block; width: 14rem;}",
+        "div > div > div {display: flex; flex-direction: column;}"
+      ],
+      "settings": {
+        "title": "FAQs"
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "You may also like",
+        "blog": "news",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "26a3690d-5ede-4ede-b454-33486606febb",
+    "blog-posts"
+  ]
+}

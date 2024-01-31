@@ -1,0 +1,85 @@
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": true,
+        "collection_image_enable": false,
+        "parallax": false
+      }
+    },
+    "promo-grid": {
+      "type": "promo-grid",
+      "blocks": {
+        "banner": {
+          "type": "banner",
+          "settings": {
+            "heading": "Need cups now?",
+            "text": "Never run out of stock again when you can control your own inventory. Get a free quote!",
+            "link": "shopify:\/\/pages\/custom-printing",
+            "label": "Learn More",
+            "color_tint": "#26bfcb",
+            "color_tint_opacity": 16,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "banner"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 20,
+        "space_above": true,
+        "space_below": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "subcollections": {
+          "type": "subcollections",
+          "disabled": true,
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 4,
+            "rows_per_page": 7,
+            "mobile_flush_grid": false
+          }
+        },
+        "collection_description": {
+          "type": "collection_description",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "subcollections",
+        "product_grid",
+        "collection_description"
+      ],
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true
+      }
+    },
+    "collection-rush-bowls": {
+      "type": "collection-rush-bowls",
+      "settings": {}
+    }
+  },
+  "order": [
+    "collection-rush-bowls",
+    "collection-header",
+    "promo-grid",
+    "main-collection"
+  ]
+}

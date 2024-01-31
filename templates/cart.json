@@ -1,0 +1,88 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {}
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "title": "Popular Picks",
+        "home_featured_products": "popular-picks",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "c25517dc-3df1-4a40-a1d6-e275539f708a": {
+      "type": "featured-product",
+      "blocks": {
+        "template--14152949301283__c25517dc-3df1-4a40-a1d6-e275539f708a-price-1": {
+          "type": "price",
+          "settings": {}
+        },
+        "template--14152949301283__c25517dc-3df1-4a40-a1d6-e275539f708a-description-1": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "template--14152949301283__c25517dc-3df1-4a40-a1d6-e275539f708a-variant_picker-1": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": false
+          }
+        },
+        "template--14152949301283__c25517dc-3df1-4a40-a1d6-e275539f708a-buy_buttons-1": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "surface_pickup_enable": true,
+            "show_gift_card_recipient": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14152949301283__c25517dc-3df1-4a40-a1d6-e275539f708a-price-1",
+        "template--14152949301283__c25517dc-3df1-4a40-a1d6-e275539f708a-description-1",
+        "template--14152949301283__c25517dc-3df1-4a40-a1d6-e275539f708a-variant_picker-1",
+        "template--14152949301283__c25517dc-3df1-4a40-a1d6-e275539f708a-buy_buttons-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "featured_product": "",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "small",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recently-viewed",
+    "featured-collection",
+    "c25517dc-3df1-4a40-a1d6-e275539f708a"
+  ]
+}

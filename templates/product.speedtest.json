@@ -1,0 +1,265 @@
+{
+  "sections": {
+    "pf-1c376f06": {
+      "type": "pf-1c376f06",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": true
+          }
+        },
+        "c6053225-3715-433e-9d8f-e2d15da0feac": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "globe",
+            "text": "Free commercial shipping"
+          }
+        },
+        "546a726c-db1f-4ef4-9112-d36a8cb53a66": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "package",
+            "text": "1 Case = {{ product.metafields.my_fields.units_per_case.value }}"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": false
+          }
+        },
+        "cc4a777a-c1b9-4183-bdfc-5d354e823fea": {
+          "type": "shopify:\/\/apps\/seal-subscriptions\/blocks\/subscription-widget\/13b25004-a140-4ab7-b5fe-29918f759699",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "price",
+        "separator",
+        "variant_picker",
+        "c6053225-3715-433e-9d8f-e2d15da0feac",
+        "sales_point",
+        "546a726c-db1f-4ef4-9112-d36a8cb53a66",
+        "inventory_status",
+        "buy_buttons",
+        "cc4a777a-c1b9-4183-bdfc-5d354e823fea",
+        "description"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".rfq-btn-857 {border: none !important;"
+      ],
+      "settings": {
+        "sku_enable": true,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": false,
+        "mobile_layout": "full",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "background-image-text": {
+      "type": "background-image-text",
+      "disabled": true,
+      "settings": {
+        "subtitle": "Impressive",
+        "title": "About your brand",
+        "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": false
+      }
+    },
+    "text-and-image": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "subtitle": "",
+        "title": "About your brand",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "66",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "text-and-image2": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "subtitle": "",
+        "title": "About your brand",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "66",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "b266a936-eace-40e9-8cff-6770294c2b5c": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--14567892942883__b266a936-eace-40e9-8cff-6770294c2b5c-image-1": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "link": "",
+            "width": "50%",
+            "alignment": "center"
+          }
+        },
+        "template--14567892942883__b266a936-eace-40e9-8cff-6770294c2b5c-liquid-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div class=\"custom-cups-form\"><h2>Want a Custom Cup<\/h2><p>NEVER RUN OUT OF INVENTORY- QUICK LEAD TIME-SAVE MONEY WITH MORE PRODUCT.<\/p><script charset=\"utf-8\" type=\"text\/javascript\" src=\"\/\/js.hsforms.net\/forms\/embed\/v2.js\"><\/script>\n<script>\n  hbspt.forms.create({\n    region: \"na1\",\n    portalId: \"21466193\",\n    formId: \"6ad2101c-9b55-4b3d-83e5-970bd2d7c4e2\"\n  });\n<\/script><\/div>",
+            "width": "100%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--14567892942883__b266a936-eace-40e9-8cff-6770294c2b5c-image-1",
+        "template--14567892942883__b266a936-eace-40e9-8cff-6770294c2b5c-liquid-1"
+      ],
+      "custom_css": [
+        ".custom-cups-form {padding-left: 1em; background-color: lightblue; color: white;}",
+        "h2 {font-size: 4em; text-align: center;}",
+        "p {text-align: center;}"
+      ],
+      "settings": {
+        "full_width": true,
+        "space_around": true
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonials-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonials-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonials-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        }
+      },
+      "block_order": [
+        "testimonials-0",
+        "testimonials-1",
+        "testimonials-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Testimonials",
+        "align_text": "center",
+        "round_images": true,
+        "color_background": "#f9f9f9",
+        "color_text": "#1c1d1d"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "settings": {}
+    }
+  },
+  "order": [
+    "pf-1c376f06",
+    "main",
+    "sub",
+    "background-image-text",
+    "text-and-image",
+    "text-and-image2",
+    "b266a936-eace-40e9-8cff-6770294c2b5c",
+    "testimonials",
+    "product-recommendations",
+    "recently-viewed",
+    "collection-return"
+  ]
+}

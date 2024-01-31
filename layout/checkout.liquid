@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}" dir="{{ direction }}" class="{{ checkout_html_classes }}">
+   <head>
+{% include 'limespot' %}
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, user-scalable=0">
+      <meta name="referrer" content="origin">
+
+      {%- comment -%}Auto-disabled. Yoast plugin is taking care of SEO output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
+<title>{{ page_title }}</title>
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
+
+      {{ content_for_header }}
+
+      {{ checkout_stylesheets }}
+
+      <style>
+       .tax-info-icon,
+       .shipping-info-icon {
+           border-radius: 40%;
+           background: #24C0CB;
+           padding: 0px 5px;
+           color: white;
+           font-style: italic;
+           font-size: 11px;
+           margin-left: 3px;
+       }
+
+       #tax-info-shadow {
+           display: none;
+       }
+
+       #tax-info-shadow.visible {
+           position: absolute;
+           width:100vw;
+           height: 100vh;
+           background: RGB(168, 168, 168, 0.6);
+           z-index: 2;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+       }
+
+       #tax-info {
+           width: 508px;
+           max-width: 90vw;
+           background: white;
+           border: 1px solid;
+           border-radius: 15px;
+           padding: 10px;
+       }
+
+       #tax-info a {
+           text-decoration: underline;
+           color: unset;
+       }
+
+       div.section--shipping-method>div.section__header {
+           display: flex;
+       }
+
+       div.section--shipping-method>div.section__header>a {
+           padding: 5px 0 0 5px;
+       }
+
+       #address-validator-overlay {
+           display: none;
+       }
+
+       #address-validator-overlay.visible {
+           display: unset;
+           position: fixed;
+           width: 100vw;
+           height: 100vh;
+           background-color: rgba(0,0,0,.4);
+           top: 0;
+           right: 0;
+           display: flex;
+           flex-flow: column;
+           justify-content: center;
+           align-items: center;
+           z-index: 10;
+       }
+       #address-validator-popup {
+           background: white;
+           padding: 50px;
+           border-radius: 15px;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           overflow-y: auto;
+           max-height: 100vh;
+       }
+       #address-validator-popup h2 {
+           font-weight: bold;
+           text-align: center;
+       }
+       #address-validator-popup p {
+           font-size: 17px;
+           text-align: center;
+           margin: 30px 0;
+       }
+       #address-validator-popup .addresses {
+           display: none;
+           padding: 25px;
+       }
+       #address-validator-popup .addresses.visible {
+           display: flex;
+       }
+       #address-validator-popup .address {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           padding: 12px;
+           min-width: 125px;
+       }
+       #address-validator-popup .address>div {
+           white-space:nowrap;
+       }
+       #address-validator-popup .addresses h4 {
+           font-weight: bold;
+           margin-bottom: 7px;
+       }
+       #address-validator-popup .addresses .original h4 {
+           text-align: center;
+       }
+       #address-validator-popup .addresses .original {
+           flex: .25;
+           border-right: 1px solid gray;
+           padding-right: 30px;
+           margin-right: 30px;
+       }
+       #address-validator-popup .addresses .candidates-wrapper {
+           flex: .75;
+       }
+       #address-validator-popup #candidates {
+           display: flex;
+           max-width: 450px;
+           overflow: auto;
+       }
+       #address-validator-popup #candidates::-webkit-scrollbar {
+           -webkit-appearance: none;
+           background: #f2f0f0;
+           height: 7px;
+       }
+       #address-validator-popup #candidates::-webkit-scrollbar-thumb {
+           border-radius: 4px;
+           background-color: #adadad;
+           -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+       }
+       #address-validator-popup #candidates .address:hover {
+           background-color: #f0efef;
+           border-radius: 4px;
+       }
+       #address-validator-popup .address .displayChange {
+           color: #26bfcb;
+       }
+       #address-validator-popup .buttons {
+        width: 100%;
+           display: grid;
+           grid-template-columns: 1fr 1fr 1fr;
+           align-items: center;
+           justify-items: center;
+       }
+       #address-validator-popup button {
+           cursor: pointer;
+           background-color: #26bfcb;
+           background-clip: border-box;
+           box-sizing: border-box;
+           border: 1px transparent solid;
+           border-radius: 5px;
+           color: white;
+           font-weight: 500;
+           padding: 1.4em 1.7em;
+           text-align: center;
+           align-items: center;
+           justify-items: center;
+           max-width: 200px;
+       }
+       #address-validator-popup button:hover {
+           background-color: #1e97a0;
+       }
+       #address-validator-popup button#proceed {
+           margin-left: 25px;
+           display: none;
+       }
+       #address-validator-popup button#proceed.visible {
+           display: unset;
+           background: none;
+           color: #26bfcb;
+           width: 170px;
+       }
+
+       #address-validator-popup button#proceed.visible:hover {
+        background-color: #f0efef;
+    }
+
+    #address-validator-popup button#update-address {
+        visibility: hidden;
+    }
+
+    #address-validator-popup button#update-address.visible {
+        display: inherit;
+        visibility: visible;
+    }
+
+       #address-validator-popup div.acknowledgement{
+        margin-left: 25px;
+        display: none;
+       }
+     #address-validator-popup div.acknowledgement.visible{
+        display: unset;
+        display: unset;
+        margin-bottom: 30px;
+       }
+
+       #address-validator-popup button#cancel-button {
+        background: none;
+        color: #26bfcb;
+       }
+
+       #address-validator-popup button#cancel-button:hover {
+        box-sizing: border-box;
+        border-radius: 5px;
+        background-color: #f0efef;
+       }
+
+       #address-validator-popup button#cancel-button.noCandidates {
+        color: white;
+        border: 1px solid;
+        background-color: #26bfcb;
+       }
+
+       #address-validator-popup button#cancel-button.noCandidates:hover {
+        background-color: #1e97a0;
+       }
+
+       /* Dropdown Button */
+       #address-validator-popup .dropbtn {
+           display: none;
+        }
+
+
+       /* Dropdown Button */
+       #address-validator-popup .dropbtn.visible {
+        display: unset;
+        background : none;
+        color: #26bfcb;
+        border: 1.5px solid #26bfcb;
+        cursor: pointer;
+    }
+        
+        /* Dropdown button on hover & focus */
+        #address-validator-popup .dropbtn:hover, .dropbtn:focus {
+            background-color: #1e97a0;
+            color: white;
+        }
+        
+        /* The container <div> - needed to position the dropdown content */
+            #address-validator-popup .dropdown {
+            position: relative;
+            display: inline-block;
+            align-self: center;
+        }
+        
+        /* Dropdown Content (Hidden by Default) */
+        #address-validator-popup .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        /* Links inside the dropdown */
+        #address-validator-popup .dropdown-content .address {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        #address-validator-popup .dropdown-content .address{
+            display: flex;
+
+        }
+
+        /* Change color of dropdown links on hover */
+        #address-validator-popup .dropdown-content .address:hover {background-color: #ddd}
+
+        #address-validator-popup #myDropdown.dropdown-content.show .address:hover{
+            background-color: #aca7a7;
+            border-radius: 4px;
+        }
+
+        
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        #address-validator-popup .show {
+            display:block;     
+            max-height: 155px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            width: 100%;
+        }
+
+        #address-validator-popup .dropdown-wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-left: 0px;
+        }
+
+        #address-validator-popup .dropdown-wrapper.withButton{
+            margin-left: 160px;
+        }
+
+       @media only screen and (max-width: 900px) {
+           #address-validator-popup {
+               max-width: 275px;
+           }
+
+           #address-validator-popup .dropdown-wrapper.withButton{
+            margin: 0px;
+           }
+           #address-validator-popup .addresses {
+               flex-direction: column;
+               align-items: center;
+           }
+           #address-validator-popup .addresses .original {
+               flex: .25;
+               border-right: 0;
+               border-bottom: 1px solid gray;
+               padding-right: 0;
+               margin-right: 0;
+               padding-bottom: 30px;
+               margin-bottom: 30px;
+           }
+           #address-validator-popup .addresses h4 {
+               text-align: center;
+           }
+           #address-validator-popup #candidates {
+               flex-direction: column;
+           }
+
+           #address-validator-popup .show {
+            max-height:135px;
+            border-radius: 4px;
+        }
+
+           #address-validator-popup .dropdown-wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 30px;
+            margin-left: 0px;
+           }
+
+           #address-validator-popup .buttons{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+           }
+       }
+      </style>
+      {{ checkout_scripts }}
+
+      <!-- ADDRESS VALIDATOR -->
+      <script async src="https://d3ox8tdk614ykk.cloudfront.net/pobox_checker.js"></script>
+   
+  {% render 'shogun-head' %}
+
+       <!--Route Code Edited 4/26/2023-->
+  <script type="text/javascript" src="https://cdn.routeapp.io/route-widget-shopify/v2/route-widget-shopify-stable-v2.min.js"></script>
+  <style>
+    .route-div::after{
+      content: "";
+      white-space: pre-wrap;
+      display: inline-block;
+    }
+    .route-div{
+      text-align: right;
+    }
+  </style>
+  <!--End Route Code-->
+
+  <!-- BEGIN GCR Opt-in Module Code -->
+
+  <script src="https://apis.google.com/js/platform.js?onload=renderOptIn" async defer></script>
+  
+  <script>
+    window.renderOptIn = function() {
+      window.gapi.load('surveyoptin', function() {
+        window.gapi.surveyoptin.render({
+          // REQUIRED
+          "merchant_id": "MERCHANT_ID",
+          
+          "order_id": "ORDER_ID",
+          
+          "email": "CUSTOMER_EMAIL",
+          
+          "delivery_country": "COUNTRY_CODE",
+          
+          "estimated_delivery_date": "YYYY-MM-DD",
+        });
+      });
+    }
+  </script>
+
+<!-- END GCR Opt-in Module Code -->
+     
+</head>
+   <body>
+      {{ skip_to_content_link }}
+
+      <div class="banner" data-header>
+         <div class="wrap">
+            {{ content_for_logo }}
+         </div>
+      </div>
+
+      {{ order_summary_toggle }}
+
+      <div class="content" data-content>
+         <div class="wrap">
+            <div class="main" role="main">
+               <div id="address-validator-overlay">
+                  <div id="address-validator-popup" data-second-attempt="false" data-validated="false">
+                     <div id="address-validator-header">
+                        <h2>Oops, looks like we can't validate your address</h2>
+                        <p id="address-validator-message"></p>
+                     </div>
+                     <div class="dropdown-wrapper">
+                     <div class="addresses">
+                        <div class="original">
+                           <h4>Original Address:</h4>
+                           <div class="address"></div>
+                        </div>
+                        <div class="candidates-wrapper">
+                           <h4></h4>
+                           <div id="candidates"></div>
+                        </div>
+                     </div>
+                     <div class="dropdown">
+                        <button id="drop-down" class="dropbtn">See More Options</button>
+                        <div id="myDropdown" class="dropdown-content"></div>
+                    </div>
+                </div>
+                <div class="acknowledgement">
+                    <input class="input-checkbox" type="checkbox" value="0" id="acknowledgement_checkbox">
+                    <label class="checkbox__label" style="display: inline; padding: 3px;"for="acknowledgement_checkbox">
+                        By checking this box you acknowledge and accept the risks associated with an invalid address override. 
+                    </label>
+                </div>
+                     <div class="buttons">
+                        <button id="cancel-button">Cancel</button>
+                        <button id="update-address">Update Address</button>
+                        <button id="proceed">Continue Anyway</button>
+
+                     </div>
+                  </div>
+               </div>
+               <div class="main__header">
+                  {{ content_for_logo }}
+                  {{ breadcrumb }}
+                  {{ alternative_payment_methods }}
+               </div>
+               <div class="main__content">
+                  {{ content_for_layout }}
+
+               </div>
+               <div class="main__footer">
+                  {{ content_for_footer }}
+               </div>
+            </div>
+            <div class="sidebar" role="complementary">
+               <div class="sidebar__header">
+                  {{ content_for_logo }}
+               </div>
+               <div class="sidebar__content">
+                  <limespot></limespot>
+{{ content_for_order_summary }}
+                  <script>
+				           var aTags = document.getElementsByTagName("th");
+				           var searchText = "Taxes";
+				           var taxHeading;
+
+				           for (var i = 0; i < aTags.length; i++) {
+  					           if (aTags[i].textContent == searchText) {
+    					             taxHeading = aTags[i];
+    					             break;
+  					           }
+				           }
+                   let taxInfoIcon = document.createElement("i");
+                   taxInfoIcon.innerText="i";
+                   taxInfoIcon.classList.add("tax-info-icon");
+                   taxInfoIcon.onclick = function() { revealTaxInfo(); };
+                   taxHeading.append(taxInfoIcon);
+			            </script>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      {{ tracking_code }}
+
+      <div id="tax-info-shadow" onclick="revealTaxInfo()">
+         <div id="tax-info">
+            <h3>
+               Due to the Supreme Court decision in Wayfair v South Dakota, many states are now
+               requiring online sellers to collect and remit sales tax even if they do not have a
+               physical presence in that state. More information can be found
+               <a href="https://en.wikipedia.org/wiki/South_Dakota_v._Wayfair,_Inc.">here</a>
+               But don't worry, you have options. To avoid being charged sales tax,
+               all you need to do is:
+            </h3>
+            <ol>
+               <li>
+                  Apply for your state's sales tax ID (which you likely have already done if you are
+                  a registered business and collect sales tax)
+               </li>
+               <li>
+                  Fill out your state's sales tax exemption form (sometimes called Sales Tax
+                  Certificate or Resell Certificate). These forms are available only with a simple
+                  search for "sales tax exempt form (State)" just add your state.
+               </li>
+               <li>
+                  Email this form to us at:
+                  <a href="mailto:customerSolutions@FrozenDessertSupplies.com">
+                     CustomerSolutions@FrozenDessertSupplies.com
+                  </a>
+               </li>
+               <li>
+                  We will review the form and update your customer profile to ensure you are not
+                  charged sales tax on your purchases.
+               </li>
+            </ol>
+            <p>
+               Disclaimer: We do not provide tax, legal or accounting advice. This is for
+               informational purposes to help you, and is not intended to provide, and should not
+               be relied on for, tax, legal or accounting advice. You should consult your own tax,
+               legal and accounting advisors as needed.
+            </p>
+         </div>
+      </div>
+
+      <div id="shipping-address"
+           data-address1="{{ checkout.shipping_address.address1 }}"
+           data-address2="{{ checkout.shipping_address.address2 }}"
+           data-city="{{ checkout.shipping_address.city }}"
+           data-company="{{ checkout.shipping_address.company }}"
+           data-country="{{ checkout.shipping_address.country }}"
+           data-country-code="{{ checkout.shipping_address.country_code }}"
+           data-first-name="{{ checkout.shipping_address.first_name }}"
+           data-last-name="{{ checkout.shipping_address.last_name }}"
+           data-name="{{ checkout.shipping_address.name }}"
+           data-phone="{{ checkout.shipping_address.phone }}"
+           data-province="{{ checkout.shipping_address.province }}"
+           data-province-code="{{ checkout.shipping_address.province_code }}"
+           data-street="{{ checkout.shipping_address.street }}"
+           data-zip="{{ checkout.shipping_address.zip }}"
+      > <!-- snip variant HTML --> </div>
+
+	    {{ 'jquery-3.3.1.min.js' | asset_url | script_tag }}
+      {{ 'checkout_script.aio.min.js' | asset_url | script_tag }}
+
+   </body>
+</html>

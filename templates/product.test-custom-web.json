@@ -1,0 +1,226 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "dropdown",
+            "color_swatches": false
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "package",
+            "text": "Current lead time: 8-10 weeks"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "dc348c21-78bf-4bb9-bd70-8b86411df3ed": {
+          "type": "separator",
+          "settings": {}
+        },
+        "a9bead06-f2a5-48d8-a502-0aefd8fab7ea": {
+          "type": "custom",
+          "settings": {
+            "code": "<h4>Schedule a free consultation:<\/h4>"
+          }
+        },
+        "a5bd8c21-4bb3-4f36-84d1-5bd05aa07c6b": {
+          "type": "custom",
+          "settings": {
+            "code": "<div><form method=\"POST\" action=\"https:\/\/frozendessertsupplies.activehosted.com\/proc.php\" id=\"_form_3_\" class=\"_form _form_3 _inline-form _inline-style \" novalidate=\"\"><input type=\"hidden\" name=\"u\" value=\"3\" \/> <input type=\"hidden\" name=\"f\" value=\"3\" \/> <input type=\"hidden\" name=\"s\" \/> <input type=\"hidden\" name=\"c\" value=\"0\" \/> <input type=\"hidden\" name=\"m\" value=\"0\" \/> <input type=\"hidden\" name=\"act\" value=\"sub\" \/> <input type=\"hidden\" name=\"v\" value=\"2\" \/>\n<div class=\"_form_element _x52206829 _clear\">\n<div class=\"_form-title\"><\/div>\n<\/div>\n<div class=\"_form-content form\">\n<div class=\"_form_element _x99434084 input \"><label for=\"firstname\" class=\"_form-label\"> First Name* <\/label> <input type=\"text\" id=\"firstname\" name=\"firstname\" placeholder=\"\" required=\"\" \/><\/div>\n<div class=\"_form_element _x59981618 input \"><label for=\"lastname\" class=\"_form-label\"> Last Name* <\/label> <input type=\"text\" id=\"lastname\" name=\"lastname\" placeholder=\"\" required=\"\" \/><\/div>\n<div class=\"_form_element _field2  input\"><label for=\"field[2]\" class=\"_form-label\"> Company Name* <\/label> <input type=\"text\" id=\"field[2]\" name=\"field[2]\" value=\"\" placeholder=\"\" required=\"\" \/><\/div>\n<div class=\"_form_element _field9 input\"><label for=\"field[9]\" class=\"_form-label\">Time Zone <\/label><input type=\"text\" id=\"field[9]\" name=\"field[9]\" value=\"\" placeholder=\"\" \/><\/div>\n<div class=\"_form_element _x26761401 input\"><label for=\"email\" class=\"_form-label\"> Email* <\/label> <input type=\"text\" id=\"email\" name=\"email\" placeholder=\"\" required=\"\" \/><\/div>\n<div class=\"_form_element _x56184926 input \"><label for=\"phone\" class=\"_form-label\"> Phone* <\/label> <input type=\"text\" id=\"phone\" name=\"phone\" placeholder=\"\" required=\"\" \/><\/div>\n<div class=\"_form_element _x56184927 input \"><meta charset=\"utf-8\" \/><span>What products would you like to customize?<\/span><\/div>\n<div class=\"_form_element _field1 input \"><fieldset class=\"_form-fieldset\"><input data-autofill=\"false\" type=\"hidden\" id=\"field[1][]\" name=\"field[1][]\" value=\"~|\" \/>\n<div class=\"_row _checkbox-radio flex-row\"><input id=\"field_1Ice Cream Cups\" type=\"checkbox\" name=\"field[1][]\" value=\"Ice Cream Cups\" checked=\"checked\" \/> <span> <label for=\"field_1Ice Cream Cups\"> Ice Cream Cups <\/label> <\/span><\/div>\n<div class=\"_row _checkbox-radio flex-row\"><input id=\"field_1Paper Drink Cups\" type=\"checkbox\" name=\"field[1][]\" value=\"Paper Drink Cups\" \/> <span> <label for=\"field_1Paper Drink Cups\"> Paper Drink Cups <\/label> <\/span><\/div>\n<div class=\"_row _checkbox-radio flex-row\"><input id=\"field_1Clear Plastic Cups\" type=\"checkbox\" name=\"field[1][]\" value=\"Clear Plastic Cups\" \/> <span> <label for=\"field_1Clear Plastic Cups\"> Clear Plastic Cups<\/label><\/span><\/div>\n<\/fieldset><\/div>\n<div class=\"_form_element _field1 input \"><fieldset class=\"_form-fieldset\"><input data-autofill=\"false\" type=\"hidden\" id=\"field[1][]\" name=\"field[1][]\" value=\"~|\" \/>\n<div class=\"_row _checkbox-radio flex-row\"><\/div>\n<div class=\"_row _checkbox-radio flex-row  \"><input id=\"field_1Stadium Cups\" type=\"checkbox\" name=\"field[1][]\" value=\"Stadium Cups\" \/> <span> <label for=\"field_1Stadium Cups\"> Stadium Cups <\/label> <\/span><\/div>\n<div class=\"_row _checkbox-radio flex-row\"><input id=\"field_1To-go Containers\" type=\"checkbox\" name=\"field[1][]\" value=\"To-go Containers\" \/> <span> <label for=\"field_1To-go Containers\"> To-go Containers <\/label> <\/span><\/div>\n<div class=\"_row _checkbox-radio flex-row\"><input id=\"field_1Spoons\" type=\"checkbox\" name=\"field[1][]\" value=\"Spoons\" \/> <span> <label for=\"field_1Spoons\"> Spoons <\/label> <\/span><\/div>\n<\/fieldset><\/div>\n<div class=\"_form_element _x28398030 _inline-style _clear\">\n<div class=\"_form-title\"><\/div>\n<\/div>\n<div class=\"_form_element _x65601578 input full-width\"><label for=\"ls\" class=\"_form-label\"> Please verify your request* <\/label>\n<div class=\"g-recaptcha\" data-sitekey=\"6LcwIw8TAAAAACP1ysM08EhCgzd6q5JAOUR1a0Go\"><\/div>\n<\/div>\n<div class=\"_form_element _x70528050 _inline-style _clear\">\n<div class=\"_form-title\"><\/div>\n<\/div>\n<div class=\"_button-wrapper _inline-style submit\"><button id=\"_form_3_submit\" class=\"_submit\" type=\"submit\"> Submit <\/button><\/div>\n<div class=\"_clear-element\"><\/div>\n<\/div>\n<div class=\"_form-thank-you\" style=\"display: none;\"><\/div>\n<\/form><\/div>\n<script type=\"text\/javascript\">\/\/ <![CDATA[\nwindow.cfields = {\"2\":\"company_name\",\"9\":\"state\",\"1\":\"what_products_would_you_like_to_customize\"};\nwindow._show_thank_you = function(id, message, trackcmp_url, email) {\n  var form = document.getElementById('_form_' + id + '_'), thank_you = form.querySelector('._form-thank-you');\n  form.querySelector('._form-content').style.display = 'none';\n  thank_you.innerHTML = message;\n  thank_you.style.display = 'block';\n  const vgoAlias = typeof visitorGlobalObjectAlias === 'undefined' ? 'vgo' : visitorGlobalObjectAlias;\n  var visitorObject = window[vgoAlias];\n  if (email && typeof visitorObject !== 'undefined') {\n    visitorObject('setEmail', email);\n    visitorObject('update');\n  } else if (typeof(trackcmp_url) != 'undefined' && trackcmp_url) {\n    \/\/ Site tracking URL to use after inline form submission.\n    _load_script(trackcmp_url);\n  }\n  if (typeof window._form_callback !== 'undefined') window._form_callback(id);\n};\nwindow._show_error = function(id, message, html) {\n  var form = document.getElementById('_form_' + id + '_'), err = document.createElement('div'), button = form.querySelector('button'), old_error = form.querySelector('._form_error');\n  if (old_error) old_error.parentNode.removeChild(old_error);\n  err.innerHTML = message;\n  err.className = '_error-inner _form_error _no_arrow';\n  var wrapper = document.createElement('div');\n  wrapper.className = '_form-inner';\n  wrapper.appendChild(err);\n  button.parentNode.insertBefore(wrapper, button);\n  document.querySelector('[id^=\"_form\"][id$=\"_submit\"]').disabled = false;\n  if (html) {\n    var div = document.createElement('div');\n    div.className = '_error-html';\n    div.innerHTML = html;\n    err.appendChild(div);\n  }\n};\nwindow._load_script = function(url, callback) {\n  var head = document.querySelector('head'), script = document.createElement('script'), r = false;\n  script.type = 'text\/javascript';\n  script.charset = 'utf-8';\n  script.src = url;\n  if (callback) {\n    script.onload = script.onreadystatechange = function() {\n      if (!r && (!this.readyState || this.readyState == 'complete')) {\n        r = true;\n        callback();\n      }\n    };\n  }\n  head.appendChild(script);\n};\n(function() {\n  if (window.location.search.search(\"excludeform\") !== -1) return false;\n  var getCookie = function(name) {\n    var match = document.cookie.match(new RegExp('(^|; )' + name + '=([^;]+)'));\n    return match ? match[2] : null;\n  }\n  var setCookie = function(name, value) {\n    var now = new Date();\n    var time = now.getTime();\n    var expireTime = time + 1000 * 60 * 60 * 24 * 365;\n    now.setTime(expireTime);\n    document.cookie = name + '=' + value + '; expires=' + now + ';path=\/';\n  }\n      var addEvent = function(element, event, func) {\n    if (element.addEventListener) {\n      element.addEventListener(event, func);\n    } else {\n      var oldFunc = element['on' + event];\n      element['on' + event] = function() {\n        oldFunc.apply(this, arguments);\n        func.apply(this, arguments);\n      };\n    }\n  }\n  var _removed = false;\n  var form_to_submit = document.getElementById('_form_3_');\n  var allInputs = form_to_submit.querySelectorAll('input, select, textarea'), tooltips = [], submitted = false;\n\n  var getUrlParam = function(name) {\n    var regexStr = '[\\?&]' + name + '=([^&#]*)';\n    var results = new RegExp(regexStr, 'i').exec(window.location.href);\n    return results != undefined ? decodeURIComponent(results[1]) : false;\n  };\n\n  for (var i = 0; i < allInputs.length; i++) {\n    var regexStr = \"field\\\\[(\\\\d+)\\\\]\";\n    var results = new RegExp(regexStr).exec(allInputs[i].name);\n    if (results != undefined) {\n      allInputs[i].dataset.name = window.cfields[results[1]];\n    } else {\n      allInputs[i].dataset.name = allInputs[i].name;\n    }\n    var fieldVal = getUrlParam(allInputs[i].dataset.name);\n\n    if (fieldVal) {\n      if (allInputs[i].dataset.autofill === \"false\") {\n        continue;\n      }\n      if (allInputs[i].type == \"radio\" || allInputs[i].type == \"checkbox\") {\n        if (allInputs[i].value == fieldVal) {\n          allInputs[i].checked = true;\n        }\n      } else {\n        allInputs[i].value = fieldVal;\n      }\n    }\n  }\n\n  var remove_tooltips = function() {\n    for (var i = 0; i < tooltips.length; i++) {\n      tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);\n    }\n    tooltips = [];\n  };\n  var remove_tooltip = function(elem) {\n    for (var i = 0; i < tooltips.length; i++) {\n      if (tooltips[i].elem === elem) {\n        tooltips[i].tip.parentNode.removeChild(tooltips[i].tip);\n        tooltips.splice(i, 1);\n        return;\n      }\n    }\n  };\n  var create_tooltip = function(elem, text) {\n    var tooltip = document.createElement('div'), arrow = document.createElement('div'), inner = document.createElement('div'), new_tooltip = {};\n    if (elem.type != 'radio' && elem.type != 'checkbox') {\n      tooltip.className = '_error';\n      arrow.className = '_error-arrow';\n      inner.className = '_error-inner';\n      inner.innerHTML = text;\n      tooltip.appendChild(arrow);\n      tooltip.appendChild(inner);\n      elem.parentNode.appendChild(tooltip);\n    } else {\n      tooltip.className = '_error-inner _no_arrow';\n      tooltip.innerHTML = text;\n      elem.parentNode.insertBefore(tooltip, elem);\n      new_tooltip.no_arrow = true;\n    }\n    new_tooltip.tip = tooltip;\n    new_tooltip.elem = elem;\n    tooltips.push(new_tooltip);\n    return new_tooltip;\n  };\n  var resize_tooltip = function(tooltip) {\n    var rect = tooltip.elem.getBoundingClientRect();\n    var doc = document.documentElement, scrollPosition = rect.top - ((window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0));\n    if (scrollPosition < 40) {\n      tooltip.tip.className = tooltip.tip.className.replace(\/ ?(_above|_below) ?\/g, '') + ' _below';\n    } else {\n      tooltip.tip.className = tooltip.tip.className.replace(\/ ?(_above|_below) ?\/g, '') + ' _above';\n    }\n  };\n  var resize_tooltips = function() {\n    if (_removed) return;\n    for (var i = 0; i < tooltips.length; i++) {\n      if (!tooltips[i].no_arrow) resize_tooltip(tooltips[i]);\n    }\n  };\n  var validate_field = function(elem, remove) {\n    var tooltip = null, value = elem.value, no_error = true;\n    remove ? remove_tooltip(elem) : false;\n    if (elem.type != 'checkbox') elem.className = elem.className.replace(\/ ?_has_error ?\/g, '');\n    if (elem.getAttribute('required') !== null) {\n      if (elem.type == 'radio' || (elem.type == 'checkbox' && \/any\/.test(elem.className))) {\n        var elems = form_to_submit.elements[elem.name];\n        if (!(elems instanceof NodeList || elems instanceof HTMLCollection) || elems.length <= 1) {\n          no_error = elem.checked;\n        }\n        else {\n          no_error = false;\n          for (var i = 0; i < elems.length; i++) {\n            if (elems[i].checked) no_error = true;\n          }\n        }\n        if (!no_error) {\n          tooltip = create_tooltip(elem, \"Please select an option.\");\n        }\n      } else if (elem.type =='checkbox') {\n        var elems = form_to_submit.elements[elem.name], found = false, err = [];\n        no_error = true;\n        for (var i = 0; i < elems.length; i++) {\n          if (elems[i].getAttribute('required') === null) continue;\n          if (!found && elems[i] !== elem) return true;\n          found = true;\n          elems[i].className = elems[i].className.replace(\/ ?_has_error ?\/g, '');\n          if (!elems[i].checked) {\n            no_error = false;\n            elems[i].className = elems[i].className + ' _has_error';\n            err.push(\"Checking %s is required\".replace(\"%s\", elems[i].value));\n          }\n        }\n        if (!no_error) {\n          tooltip = create_tooltip(elem, err.join('<br\/>'));\n        }\n      } else if (elem.tagName == 'SELECT') {\n        var selected = true;\n        if (elem.multiple) {\n          selected = false;\n          for (var i = 0; i < elem.options.length; i++) {\n            if (elem.options[i].selected) {\n              selected = true;\n              break;\n            }\n          }\n        } else {\n          for (var i = 0; i < elem.options.length; i++) {\n            if (elem.options[i].selected && !elem.options[i].value) {\n              selected = false;\n            }\n          }\n        }\n        if (!selected) {\n          elem.className = elem.className + ' _has_error';\n          no_error = false;\n          tooltip = create_tooltip(elem, \"Please select an option.\");\n        }\n      } else if (value === undefined || value === null || value === '') {\n        elem.className = elem.className + ' _has_error';\n        no_error = false;\n        tooltip = create_tooltip(elem, \"This field is required.\");\n      }\n    }\n    if (no_error && elem.name == 'email') {\n      if (!value.match(\/^[\\+_a-z0-9-'&=]+(\\.[\\+_a-z0-9-']+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,})$\/i)) {\n        elem.className = elem.className + ' _has_error';\n        no_error = false;\n        tooltip = create_tooltip(elem, \"Enter a valid email address.\");\n      }\n    }\n    if (no_error && \/date_field\/.test(elem.className)) {\n      if (!value.match(\/^\\d\\d\\d\\d-\\d\\d-\\d\\d$\/)) {\n        elem.className = elem.className + ' _has_error';\n        no_error = false;\n        tooltip = create_tooltip(elem, \"Enter a valid date.\");\n      }\n    }\n    tooltip ? resize_tooltip(tooltip) : false;\n    return no_error;\n  };\n  var needs_validate = function(el) {\n        if(el.getAttribute('required') !== null){\n            return true\n        }\n        if(el.name === 'email' && el.value !== \"\"){\n            return true\n        }\n        return false\n  };\n  var validate_form = function(e) {\n    var err = form_to_submit.querySelector('._form_error'), no_error = true;\n    if (!submitted) {\n      submitted = true;\n      for (var i = 0, len = allInputs.length; i < len; i++) {\n        var input = allInputs[i];\n        if (needs_validate(input)) {\n          if (input.type == 'text') {\n            addEvent(input, 'blur', function() {\n              this.value = this.value.trim();\n              validate_field(this, true);\n            });\n            addEvent(input, 'input', function() {\n              validate_field(this, true);\n            });\n          } else if (input.type == 'radio' || input.type == 'checkbox') {\n            (function(el) {\n              var radios = form_to_submit.elements[el.name];\n              for (var i = 0; i < radios.length; i++) {\n                addEvent(radios[i], 'click', function() {\n                  validate_field(el, true);\n                });\n              }\n            })(input);\n          } else if (input.tagName == 'SELECT') {\n            addEvent(input, 'change', function() {\n              validate_field(this, true);\n            });\n          } else if (input.type == 'textarea'){\n            addEvent(input, 'input', function() {\n              validate_field(this, true);\n            });\n          }\n        }\n      }\n    }\n    remove_tooltips();\n    for (var i = 0, len = allInputs.length; i < len; i++) {\n      var elem = allInputs[i];\n      if (needs_validate(elem)) {\n        if (elem.tagName.toLowerCase() !== \"select\") {\n          elem.value = elem.value.trim();\n        }\n        validate_field(elem) ? true : no_error = false;\n      }\n    }\n    if (!no_error && e) {\n      e.preventDefault();\n    }\n    resize_tooltips();\n    return no_error;\n  };\n  addEvent(window, 'resize', resize_tooltips);\n  addEvent(window, 'scroll', resize_tooltips);\n  window['recaptcha_callback'] = function() {\n  \/\/ Get all recaptchas in the DOM (there may be more than one form on the page).\n  var recaptchas = document.getElementsByClassName(\"g-recaptcha\");\n  for (var i in recaptchas) {\n    \/\/ Set the recaptcha element ID, so the recaptcha can be applied to each element.\n    var recaptcha_id = \"recaptcha_\" + i;\n    recaptchas[i].id = recaptcha_id;\n    var el = document.getElementById(recaptcha_id);\n    if (el != null) {\n      var sitekey = el.getAttribute(\"data-sitekey\");\n      var stoken = el.getAttribute(\"data-stoken\");\n      grecaptcha.render(recaptcha_id, {\"sitekey\":sitekey,\"stoken\":stoken});\n    }\n  }\n};  _load_script(\"\/\/www.google.com\/recaptcha\/api.js?onload=recaptcha_callback&render=explicit\");\n  window._old_serialize = null;\n  if (typeof serialize !== 'undefined') window._old_serialize = window.serialize;\n  _load_script(\"\/\/d3rxaij56vjege.cloudfront.net\/form-serialize\/0.3\/serialize.min.js\", function() {\n    window._form_serialize = window.serialize;\n    if (window._old_serialize) window.serialize = window._old_serialize;\n  });\n  var form_submit = function(e) {\n    e.preventDefault();\n    if (validate_form()) {\n      \/\/ use this trick to get the submit button & disable it using plain javascript\n      document.querySelector('#_form_3_submit').disabled = true;\n            var serialized = _form_serialize(document.getElementById('_form_3_')).replaceAll('%0A', '\\\\n');\n      var err = form_to_submit.querySelector('._form_error');\n      err ? err.parentNode.removeChild(err) : false;\n      _load_script('https:\/\/frozendessertsupplies.activehosted.com\/proc.php?' + serialized + '&jsonp=true');\n    }\n    return false;\n  };\n  addEvent(form_to_submit, 'submit', form_submit);\n})();\n\/\/ ]]><\/script>"
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Get a Quote",
+            "content": "",
+            "page": "custom-printing-form"
+          }
+        }
+      },
+      "block_order": [
+        "price",
+        "separator",
+        "variant_picker",
+        "sales_point",
+        "buy_buttons",
+        "description",
+        "dc348c21-78bf-4bb9-bd70-8b86411df3ed",
+        "a9bead06-f2a5-48d8-a502-0aefd8fab7ea",
+        "a5bd8c21-4bb3-4f36-84d1-5bd05aa07c6b",
+        "tab"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": false,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": false,
+        "mobile_layout": "full",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "1631647792c1c9d486": {
+      "type": "advanced-content",
+      "blocks": {
+        "1631647792c1c9d486-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<p><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0311\/7901\/4281\/files\/corbin_icons_70px-09.png?v=1631650250\" alt=\"\" style=\"display: block; margin-left: auto; margin-right: auto;\" \/><\/p>\n<h4 style=\"text-align: center;\"><span style=\"color: #26bfcb;\">COMPLIMENTARY DESIGN<\/span><\/h4>\n<div style=\"text-align: center;\"><\/div>",
+            "width": "33%",
+            "alignment": "center"
+          }
+        },
+        "e5627ae8-807f-4070-97e7-3380f50feb3f": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0311\/7901\/4281\/files\/corbin_icons_70px-08.png?v=1631650768\" alt=\"\" style=\"display: block; margin-left: auto; margin-right: auto;\" \/><\/div>\n<h4 style=\"text-align: center;\"><span style=\"color: #26bfcb;\">Storage Solutions<\/span><\/h4>",
+            "width": "33%",
+            "alignment": "center"
+          }
+        },
+        "92ffa65d-db56-4a5b-bfdf-cb155022a202": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0268\/4508\/5731\/files\/corbin_icons_70px-10.png?v=1632341496\" alt=\"\" style=\"display: block; margin-left: auto; margin-right: auto;\" \/><\/div>\n<h4 style=\"text-align: center;\"><span style=\"color: #26bfcb;\">LOW MINIMUMS<\/span><\/h4>",
+            "width": "33%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "1631647792c1c9d486-1",
+        "e5627ae8-807f-4070-97e7-3380f50feb3f",
+        "92ffa65d-db56-4a5b-bfdf-cb155022a202"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "background-image-text": {
+      "type": "background-image-text",
+      "disabled": true,
+      "settings": {
+        "subtitle": "",
+        "title": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": false
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonials-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"These people are AMAZING! I can’t say enough positive things about my experience! My custom cups came out beautiful and they are so great with communication! I highly recommend!\"<\/p>",
+            "author": "Gabriella T.",
+            "author_info": "Scoops On Wheels"
+          }
+        },
+        "testimonials-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"Working with Frozen Dessert Supplies was one of the best vendor experiences I have ever had. In a process that could normally take months, the team of designers worked so quickly to get me proofs and were always happy to make even the smallest of adjustments to make sure we were 100% happy with our design. We are thrilled with our products, design, cost, and customer service from Frozen Dessert Supplies\/Hot Cup Factory. I would recommend them to anyone needing a vendor for cafe or restaurant products. We are proud to support this company!\"<\/p>",
+            "author": "Shawnae C.",
+            "author_info": "Whisk Coffee and Wine Bar"
+          }
+        },
+        "testimonials-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"The talented design team at Frozen Dessert Supplies is able to produce any idea you give them, along with adding professional ideas of their own that enhance the appearance of your custom product.  You will never be waiting for a response as the sales department was always quick and efficient with communication, making adjustments to my design, and getting my order placed.  Consider this for your next custom order!!! You will not be disappointed!\"<\/p>",
+            "author": "Joan M.",
+            "author_info": "Miyauchi Snack Bar"
+          }
+        }
+      },
+      "block_order": [
+        "testimonials-1",
+        "testimonials-0",
+        "testimonials-2"
+      ],
+      "settings": {
+        "title": "Testimonials",
+        "align_text": "center",
+        "round_images": false,
+        "color_background": "#ffffff",
+        "color_text": "#454449"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "sub",
+    "1631647792c1c9d486",
+    "background-image-text",
+    "testimonials",
+    "product-recommendations",
+    "recently-viewed",
+    "collection-return"
+  ]
+}

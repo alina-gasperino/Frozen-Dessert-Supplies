@@ -1,0 +1,266 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "product_dynamic_variants_enable": true,
+            "color_swatches": true
+          }
+        },
+        "c6053225-3715-433e-9d8f-e2d15da0feac": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "globe",
+            "text": "Free commercial shipping"
+          }
+        },
+        "546a726c-db1f-4ef4-9112-d36a8cb53a66": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "package",
+            "text": "1 Case = {{ product.metafields.my_fields.units_per_case.value }}"
+          }
+        },
+        "inventory_status": {
+          "type": "inventory_status",
+          "settings": {
+            "inventory_threshold": 10,
+            "inventory_transfers_enable": true
+          }
+        },
+        "7d1ce8e8-ed04-4712-9f7c-51aeb621f0cb": {
+          "type": "shopify:\/\/apps\/seal-subscriptions\/blocks\/subscription-widget\/13b25004-a140-4ab7-b5fe-29918f759699",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        }
+      },
+      "block_order": [
+        "price",
+        "separator",
+        "variant_picker",
+        "c6053225-3715-433e-9d8f-e2d15da0feac",
+        "sales_point",
+        "546a726c-db1f-4ef4-9112-d36a8cb53a66",
+        "inventory_status",
+        "7d1ce8e8-ed04-4712-9f7c-51aeb621f0cb",
+        "buy_buttons",
+        "description"
+      ],
+      "custom_css": [
+        ".rfq-btn-857 {border: none !important;"
+      ],
+      "settings": {
+        "sku_enable": true,
+        "image_position": "left",
+        "image_size": "large",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_height": "flexible",
+        "thumbnail_arrows": false,
+        "mobile_layout": "full",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "background-image-text": {
+      "type": "background-image-text",
+      "disabled": true,
+      "settings": {
+        "subtitle": "Impressive",
+        "title": "About your brand",
+        "text": "<p>Pair large text with a full-width image to draw attention to an important detail of your brand or product line.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": false,
+        "parallax_direction": "top",
+        "lazyload_images": true
+      }
+    },
+    "text-and-image": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "About your brand",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "66",
+        "layout": "right",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "text-and-image2": {
+      "type": "text-and-image",
+      "disabled": true,
+      "settings": {
+        "image_mask": "none",
+        "image2_mask": "none",
+        "subtitle": "",
+        "title": "About your brand",
+        "text": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.<\/p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "image_width": "66",
+        "layout": "left",
+        "divider": false,
+        "top_padding": true,
+        "bottom_padding": true,
+        "lazyload_images": true
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonials-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonials-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        },
+        "testimonials-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>Add customer reviews and testimonials to showcase your store’s happy customers.<\/p>",
+            "author": "Author's name",
+            "author_info": "Los Angeles, CA"
+          }
+        }
+      },
+      "block_order": [
+        "testimonials-0",
+        "testimonials-1",
+        "testimonials-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Testimonials",
+        "align_text": "center",
+        "round_images": true,
+        "color_background": "#f9f9f9",
+        "color_text": "#1c1d1d"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 3,
+        "products_per_row": 3
+      }
+    },
+    "3a42427c-e496-4b05-86da-8e50f0623afb": {
+      "type": "faq",
+      "blocks": {
+        "template--14152950054947__3a42427c-e496-4b05-86da-8e50f0623afb-question-1": {
+          "type": "question",
+          "settings": {
+            "title": "Do you price match?",
+            "text": "<p>If you find a similar product with a better price somewhere else, send your invoice to our customer solutions team and we'll see what we can do!<\/p>"
+          }
+        },
+        "template--14152950054947__3a42427c-e496-4b05-86da-8e50f0623afb-question-2": {
+          "type": "question",
+          "settings": {
+            "title": "How can I become tax exempt?",
+            "text": "<p>Tax exemption can be given to certain retailers. <a href=\"https:\/\/frozendessertsupplies.com\/pages\/sales-tax-exemption-info\" target=\"_self\">Read this page to<\/a> better understand if you qualify for sales tax exemption.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14152950054947__3a42427c-e496-4b05-86da-8e50f0623afb-question-1",
+        "template--14152950054947__3a42427c-e496-4b05-86da-8e50f0623afb-question-2"
+      ],
+      "settings": {
+        "title": "FAQs"
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "recent_count": 3
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "sub",
+    "background-image-text",
+    "text-and-image",
+    "text-and-image2",
+    "testimonials",
+    "product-recommendations",
+    "3a42427c-e496-4b05-86da-8e50f0623afb",
+    "recently-viewed",
+    "collection-return"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "main": {
+      "type": "blog-template",
+      "custom_css": [
+        "h1 {font-size: 48px;}",
+        "time {font-size: 14px;}",
+        "a {font-size: 20px;}"
+      ],
+      "settings": {
+        "blog_show_tag_filter": true,
+        "blog_show_rss": false,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "blog_show_excerpt": false,
+        "blog_image_size": "wide"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

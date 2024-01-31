@@ -1,0 +1,356 @@
+{
+  "sections": {
+    "dc888442-401b-4d71-aa7a-318cce5755d9": {
+      "type": "countdown",
+      "blocks": {
+        "template--14661777293347__dc888442-401b-4d71-aa7a-318cce5755d9-content-1": {
+          "type": "content",
+          "disabled": true,
+          "settings": {
+            "heading": "Countdown",
+            "heading_size": "h2",
+            "text": "<p>Cyber Monday Sale Ends<\/p>",
+            "content_alignment": "center"
+          }
+        },
+        "template--14661777293347__dc888442-401b-4d71-aa7a-318cce5755d9-timer-1": {
+          "type": "timer",
+          "settings": {
+            "year": "2023",
+            "month": "11",
+            "day": "30",
+            "hour": "23",
+            "minute": "59",
+            "hide_timer": true,
+            "text": "<p>Something is in the making....<\/p>"
+          }
+        },
+        "template--14661777293347__dc888442-401b-4d71-aa7a-318cce5755d9-button-1": {
+          "type": "button",
+          "settings": {
+            "button_link": "https:\/\/frozendessertsupplies.com\/collections\/warehouse-sale",
+            "button": "BUY NOW!!!",
+            "button_style": "solid"
+          }
+        }
+      },
+      "block_order": [
+        "template--14661777293347__dc888442-401b-4d71-aa7a-318cce5755d9-content-1",
+        "template--14661777293347__dc888442-401b-4d71-aa7a-318cce5755d9-timer-1",
+        "template--14661777293347__dc888442-401b-4d71-aa7a-318cce5755d9-button-1"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".index-section {margin-top: -15px; margin-bottom: -50px;}"
+      ],
+      "settings": {
+        "layout": "banner",
+        "full_width": false,
+        "text_color": "#000000",
+        "background_color": "#ffffff",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0,
+        "lazyload_images": true
+      }
+    },
+    "69b7989c-df56-4b23-95d1-13662875cd6e": {
+      "type": "still-frame",
+      "custom_css": [],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Valentines_Banners-02.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Valentines_Banners_Artboard_4.jpg",
+        "focal_point": "center center",
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "top_subheading": "",
+        "title": "",
+        "title_size": 80,
+        "subheading": "",
+        "link": "https:\/\/frozendessertsupplies.com\/products\/custom-printed-mason-jar",
+        "link_text": "",
+        "link_2": "",
+        "link_text_2": "",
+        "color_accent": "rgba(0,0,0,0)",
+        "text_align": "vertical-center horizontal-center",
+        "overlay_opacity": 0
+      }
+    },
+    "featured-collections": {
+      "type": "featured-collections",
+      "blocks": {
+        "featured-collections-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "ice-cream-cups",
+            "title": "ICE CREAM CUPS",
+            "focal_point": "center center"
+          }
+        },
+        "featured-collections-1": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "all-spoons",
+            "title": "<h2>FROZEN DESSERT SPOONS<\/h2>",
+            "focal_point": "center center"
+          }
+        },
+        "featured-collections-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-to-go-containers",
+            "title": "TO-GO CONTAINERS",
+            "focal_point": "center center"
+          }
+        },
+        "2023df11-c36f-4835-ba1f-f93b21a2c938": {
+          "type": "collection",
+          "settings": {
+            "collection": "ice-cream-cup-lids",
+            "title": "ICE CREAM CUP LIDS",
+            "focal_point": "center center"
+          }
+        },
+        "19974222-097a-4a6f-b30a-9e182a555cdc": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "gelato-cups",
+            "title": "<h2>GELATO CUPS<\/h2>",
+            "focal_point": "center center"
+          }
+        },
+        "0408c2ec-dd19-497d-a5a3-bcf7729d120c": {
+          "type": "collection",
+          "settings": {
+            "collection": "color-changing-spoons",
+            "title": "COLOR CHANGING SPOONS",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "featured-collections-0",
+        "featured-collections-1",
+        "featured-collections-2",
+        "2023df11-c36f-4835-ba1f-f93b21a2c938",
+        "19974222-097a-4a6f-b30a-9e182a555cdc",
+        "0408c2ec-dd19-497d-a5a3-bcf7729d120c"
+      ],
+      "custom_css": [
+        ".index-section {margin-top: 15px; margin-bottom: 0px;}",
+        "img {border-radius: 15px;}",
+        "span,h2 {font-size: 20px;}"
+      ],
+      "settings": {
+        "title": "",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true
+      }
+    },
+    "eec3265c-1608-4939-8fb0-b63ea4c0934f": {
+      "type": "promo-grid",
+      "blocks": {
+        "c1043d3f-29ec-43d0-9097-6da09cdb96fc": {
+          "type": "product",
+          "settings": {
+            "product": "custom-printed-mason-jar",
+            "subheading": "Just Arrived",
+            "heading": "Custom Mason Jars",
+            "textarea": "Transform your ice cream servings into memorable experiences with our customized plastic mason jars, ideal for ice cream shops and dessert lovers.",
+            "link_label": "Shop Now",
+            "label": "New",
+            "enable_price": false,
+            "width": "50",
+            "text_size": 100,
+            "color_tint": "#000000",
+            "color_tint_opacity": 0,
+            "framed": false
+          }
+        },
+        "cb5ab8f1-72e5-46cc-bedc-bed29ee14a71": {
+          "type": "product",
+          "settings": {
+            "product": "6-clamshell-100-compostable",
+            "subheading": "Just Arrived",
+            "heading": "Premium USA 6-9\" Clamshells",
+            "textarea": "Crafted entirely from 100% compostable materials.",
+            "link_label": "Shop Now",
+            "label": "New",
+            "enable_price": false,
+            "width": "50",
+            "text_size": 100,
+            "color_tint": "#000000",
+            "color_tint_opacity": 0,
+            "framed": false
+          }
+        }
+      },
+      "block_order": [
+        "c1043d3f-29ec-43d0-9097-6da09cdb96fc",
+        "cb5ab8f1-72e5-46cc-bedc-bed29ee14a71"
+      ],
+      "custom_css": [
+        ".flex-grid--template--14683523153955__eec3265c-1608-4939-8fb0-b63ea4c0934f .flex-grid--gutters {margin-left: 5px;}",
+        ".type-product__label {background-color: #f06696;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "gutter_size": 10,
+        "space_above": false,
+        "space_below": false,
+        "lazyload_images": true
+      }
+    },
+    "4a242a96-9266-4861-bb52-9956a39570cf": {
+      "type": "still-frame",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Group_78.png",
+        "image_mobile": "shopify:\/\/shop_images\/Group_155.jpg",
+        "focal_point": "center center",
+        "section_height": "natural",
+        "mobile_height": "auto",
+        "top_subheading": "",
+        "title": "",
+        "title_size": 80,
+        "subheading": "",
+        "link": "https:\/\/frozendessertsupplies.com\/pages\/custom-branding",
+        "link_text": "",
+        "link_2": "",
+        "link_text_2": "",
+        "color_accent": "rgba(0,0,0,0)",
+        "text_align": "vertical-center horizontal-center",
+        "overlay_opacity": 0
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "custom_css": [
+        "h2 {font-size: 36px; font-style: bold;}",
+        ".index-section {margin-top: 0px; margin-bottom: 0px; padding-top: 60px; background-color: #f6f6f6;}",
+        "p {display: none;}",
+        ".productitem--link {color: grey; text-decoration: underline grey;}"
+      ],
+      "settings": {
+        "title": "Get The Latest Scoop",
+        "blog": "news",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": false,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    },
+    "rich-text": {
+      "type": "rich-text",
+      "blocks": {
+        "button_8pxPn4": {
+          "type": "button",
+          "settings": {
+            "link": "shopify:\/\/blogs\/news",
+            "link_text": "View All"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Frozen Dessert Supplies Meets Award-Winning Service"
+          }
+        }
+      },
+      "block_order": [
+        "button_8pxPn4",
+        "heading"
+      ],
+      "custom_css": [
+        "h2 {font-size: 36px; font-style: bold;}",
+        "div {border: none;}",
+        ".index-section {background-color: #f6f6f6; padding-bottom: 60px;}"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "a73633fe-ab27-4c6a-92fa-50d59f1c4593": {
+      "type": "advanced-content",
+      "blocks": {
+        "template--14690013839395__a73633fe-ab27-4c6a-92fa-50d59f1c4593-liquid-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<h2>Frozen Dessert Supplies Brings Award-Winning Service<\/h2>\n<p> As the #1 online distributor of frozen dessert supplies in the US, we’re proud to offer award-winning service to you. Our mission is to make your happiness our priority. Whether it’s our standard cup designs or custom cup designs, we want you to be satisfied with the products you receive. That’s why we offer product samples and free shipping on standard products!<\/p>\n\n<h2 class=\"see-more-collection\"> We Want to Please you <\/h2> \n\n<p class=\"see-more-collection\"> Having been in the wholesale industry for over a decade, we understand what you need for your shop to be successful. We sell everything you’ll need for your ice cream or frozen yogurt shop: waffle cone supplies, ice cream cups, eco-friendly spoons, and so much more! With free commercial shipping and state-of-the-art customer service, we can help you find everything you need. If you're looking for wholesale ice cream suppliers near you, look no further! We at Frozen Dessert Supplies are here to help you with all of your ice cream needs.<\/p>\n\n<h2 class=\"see-more-collection\"> We Value Transparency\n<\/h2>\n<p class=\"see-more-collection\"> We put our customers first. We will never charge hidden fees for our custom printing services. Whether you need a bulk order, or just a few cases, we have you covered.\n<\/p>\n\n<h2 class=\"see-more-collection\"> We are Eco-Friendly\n<\/h2>\n\n<p class=\"see-more-collection\"> Here at Frozen Dessert Supplies, we offer eco-friendly solutions and sustainable options for all the products you normally buy. We know how important it is to reduce single-use plastic and that’s why we offer many other options. Things like compostable ice cream cups and  tasting spoons help minimize negative impact on the environment. Most wholesale ice cream suppliers only offer traditional products but we value our customers’ wants. What’s important to you is important to us. That’s why we offer eco-friendly supplies!\n<\/p>\n\n<h2 class=\"see-more-collection\">We Want to Hear from YOU!\n<\/h2>\n<p class=\"see-more-collection\"> Because we are an online ice cream supplier, it’s not often we see our clients face-to-face. Your feedback helps us know how we are doing. Tell us how we can improve or what we’re doing well. We want to hear it! The biggest way you can help us is by telling us how you feel. Leave a review on Google or Yelp or contact us directly by calling us at 480-428-1999 or emailing us at cs@frozendessertsupplies.com. We want to hear from you!\n<\/p>\n\n<button class=\"see-more-collection-btn\" onclick=\"showMoreOnclick()\"> See More <\/button>",
+            "width": "100%",
+            "alignment": "top-middle"
+          }
+        }
+      },
+      "block_order": [
+        "template--14690013839395__a73633fe-ab27-4c6a-92fa-50d59f1c4593-liquid-1"
+      ],
+      "custom_css": [
+        "div {background-color: #ffffff;}",
+        ".custom-content {padding: 0px 10% 60px 10%;}"
+      ],
+      "settings": {
+        "full_width": false,
+        "space_around": false,
+        "lazyload_images": true
+      }
+    },
+    "163112882766202bed": {
+      "type": "newsletter",
+      "blocks": {
+        "163112882766202bed-0": {
+          "type": "title",
+          "settings": {
+            "title": "GET THE INSIDE SCOOP!",
+            "heading_size": "h1"
+          }
+        },
+        "163112882766202bed-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sign up for product announcements, promotions, and newsletters.<\/p>"
+          }
+        },
+        "163112882766202bed-2": {
+          "type": "form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "163112882766202bed-0",
+        "163112882766202bed-1",
+        "163112882766202bed-2"
+      ],
+      "custom_css": [],
+      "settings": {
+        "align_text": "center",
+        "image_width": "33",
+        "image_mask": "none",
+        "image_position": "right",
+        "color_background": "#018ea1",
+        "color_text": "#ffffff",
+        "top_padding": true,
+        "bottom_padding": true
+      }
+    }
+  },
+  "order": [
+    "dc888442-401b-4d71-aa7a-318cce5755d9",
+    "69b7989c-df56-4b23-95d1-13662875cd6e",
+    "featured-collections",
+    "eec3265c-1608-4939-8fb0-b63ea4c0934f",
+    "4a242a96-9266-4861-bb52-9956a39570cf",
+    "blog-posts",
+    "rich-text",
+    "a73633fe-ab27-4c6a-92fa-50d59f1c4593",
+    "163112882766202bed"
+  ]
+}

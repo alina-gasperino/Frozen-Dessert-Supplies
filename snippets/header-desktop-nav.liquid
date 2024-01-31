@@ -1,0 +1,230 @@
+{%- liquid
+  unless limit
+    assign limit = main_menu.links.size
+  endunless
+  unless offset
+    assign offset = 0
+  endunless
+-%}
+
+<ul
+  class="site-nav site-navigation small--hide"
+>
+  {%- for link in main_menu.links limit: limit offset: offset -%}
+    {%- liquid
+      assign has_dropdown = false
+      assign is_megamenu = false
+      if link.links != blank
+        assign has_dropdown = true
+        if link.levels > 1
+          assign is_megamenu = true
+        endif
+      endif
+    -%}
+
+    <li class="site-nav__item site-nav__expanded-item{% if has_dropdown %} site-nav--has-dropdown{% endif %}{% if is_megamenu %} site-nav--is-megamenu{% endif %}">
+      {% if is_megamenu or has_dropdown %}
+        <details
+          data-hover="{{ hover_menu }}"
+          id="site-nav-item--{{ forloop.index }}"
+          class="site-nav__details"
+        >
+          <summary
+            data-link="{{ link.url }}"
+            aria-expanded="false"
+            aria-controls="site-nav-item--{{ forloop.index }}"
+            class="site-nav__link site-nav__link--underline{% if has_dropdown %} site-nav__link--has-dropdown{% endif %}"
+          >
+            {{ link.title }} <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path d="m1.57 1.59 12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none"/></svg>
+          </summary>
+      {% else %}
+        <a
+          href="{{ link.url }}"
+          class="site-nav__link site-nav__link--underline{% if has_dropdown %} site-nav__link--has-dropdown{% endif %}"
+        >
+          {{ link.title }}
+        </a>
+      {% endif %}
+        {%- if is_megamenu -%}
+          {%- assign previous_column_type = '' -%}
+          {%- assign animation_column = 1 -%}
+
+          <div class="site-nav__dropdown megamenu text-left">
+            <div class="page-width">
+              <div class="grid{% if dropdown_alignment == 'center' %} grid--center{% endif %}">
+                <div class="grid__item medium-up--one-fifth appear-animation appear-delay-{{ animation_column }}">
+                  {%- assign animation_column = animation_column | plus: 1 -%}
+
+                  {%- for childlink in link.links -%}
+                    {%- liquid
+                      assign create_new_column = false
+
+                      if childlink.levels > 0 and forloop.index != 1
+                        assign create_new_column = true
+                      endif
+
+                      if childlink.levels == 0 and previous_column_type == 'full'
+                        assign create_new_column = true
+                      endif
+                    -%}
+
+                    {%- if create_new_column -%}
+                      </div><div class="grid__item medium-up--one-fifth appear-animation appear-delay-{{ animation_column }}">
+                      {%- assign animation_column = animation_column | plus: 1 -%}
+                    {%- endif -%}
+
+                    {%- if childlink.levels > 0 and childlink.url contains '/collections/' -%}
+                      {%- if collections[childlink.object.handle].image != blank and section.settings.mega_menu_images -%}
+                        <a href="{{ childlink.url }}">
+                          <div class="svg-mask svg-mask--landscape">
+                          {%- render 'image-element',
+                            img: collections[childlink.object.handle].image,
+                            sizeVariable: '20vw',
+                            alt: collections[childlink.object.handle].title,
+                            classes: 'megamenu__collection-image',
+                          -%}
+                          </div>
+                        </a>
+                      {%- endif -%}
+                    {%- endif -%}
+
+                    <div class="h5">
+                      <a href="{{ childlink.url }}" class="site-nav__dropdown-link site-nav__dropdown-link--top-level">{{ childlink.title }}</a>
+                    </div>
+
+                    {%- liquid
+                      if childlink.levels > 0
+                        assign previous_column_type = 'full'
+                      else
+                        assign previous_column_type = 'single'
+                      endif
+                    -%}
+
+                    {%- for grandchildlink in childlink.links -%}
+                      <div>
+                        <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">
+                          {{grandchildlink.title}}
+                        </a>
+                      </div>
+                    {%- endfor -%}
+                  {%- endfor -%}
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- elsif has_dropdown -%}
+          <ul class="site-nav__dropdown text-left">
+            {%- for childlink in link.links -%}
+              {%- liquid
+                assign has_sub_dropdown = false
+                if childlink.links != blank
+                  assign has_sub_dropdown = true
+                endif
+              -%}
+
+              <li class="{% if has_sub_dropdown %} site-nav__deep-dropdown-trigger{% endif %}">
+                <a href="{{ childlink.url }}" class="site-nav__dropdown-link site-nav__dropdown-link--second-level{% if has_sub_dropdown %} site-nav__dropdown-link--has-children{% endif %}">
+                  {{ childlink.title | escape }}
+                  {%- if has_sub_dropdown -%}
+                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path d="m1.57 1.59 12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none"/></svg>
+                  {%- endif -%}
+                </a>
+                {%- if has_sub_dropdown -%}
+                  <ul class="site-nav__deep-dropdown">
+                    {%- for grandchildlink in childlink.links -%}
+                      <li>
+                        <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">{{ grandchildlink.title | escape }}</a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      {% if is_megamenu or has_dropdown %}
+        </details>
+      {% endif %}
+    </li>
+  {%- endfor -%}
+
+  {% if shop.customer_accounts_enabled %}
+     {% if customer %}
+        {% if customer.tags contains 'Cookie Dough Bliss' %}
+           <li class="site-nav__item site-nav__expanded-item">
+              <a href="/collections/cookie-dough-bliss" class="site-nav__link site-nav__link--underline">Cookie Dough Bliss</a>
+           </li>
+        {% endif %}
+        {% if customer.tags contains 'Gofer Ice Cream' %}
+           <li class="site-nav__item site-nav__expanded-item">
+              <a href="/collections/gofer-ice-cream" class="site-nav__link site-nav__link--underline">Gofer Ice Cream</a>
+           </li>
+        {% endif %}
+  		{% if customer.tags contains 'Erics Ice Cream Factory' %}
+           <li class="site-nav__item site-nav__expanded-item">
+              <a href="/collections/erics-ice-cream-factory" class="site-nav__link site-nav__link--underline">Eric's Ice Cream Factory</a>
+           </li>
+        {% endif %}
+        {% if customer.tags contains '123 Gelato' %}
+            <li class="site-nav__item site-nav__expanded-item">
+                <a href="/collections/123-gelato" class="site-nav__link site-nav__link--underline">123 Gelato</a>
+            </li>
+        {% endif %}
+        {% if customer.tags contains 'King Kone' %}
+        <li class="site-nav__item site-nav__expanded-item">
+            <a href="/collections/king-kone" class="site-nav__link site-nav__link--underline">King Kone</a>
+        </li>
+    	{% endif %}
+          {% if customer.tags contains 'Howdy Homemade' %}
+        <li class="site-nav__item site-nav__expanded-item">
+            <a href="/collections/howdy-homemade" class="site-nav__link site-nav__link--underline">Howdy Homemade</a>
+        </li>
+    	{% endif %}
+            {% if customer.tags contains 'Coney Waffle' %}
+        <li class="site-nav__item site-nav__expanded-item">
+            <a href="/collections/coney-waffle" class="site-nav__link site-nav__link--underline">Coney Waffle</a>
+        </li>
+    	{% endif %}
+ 		 {% if customer.tags contains 'Ermas' %}
+           <li class="site-nav__item site-nav__expanded-item">
+              <a href="/collections/ermas-frozen-custard" class="site-nav__link site-nav__link--underline">Erma's Original Frozen Custard</a>
+           </li>
+        {% endif %}
+        		 {% if customer.tags contains 'Sub Zero' %}
+           <li class="site-nav__item site-nav__expanded-item">
+              <a href="/collections/sub-zero" class="site-nav__link site-nav__link--underline">Sub Zero</a>
+           </li>
+        {% endif %}
+       {% if customer.tags contains 'Scoop Deville' %}
+           <li class="site-nav__item site-nav__expanded-item">
+              <a href="/collections/Scoop-Deville" class="site-nav__link site-nav__link--underline">Scoop Deville</a>
+           </li>
+        {% endif %}
+       {% if customer.tags contains 'The Friendship Circle' %}
+           <li class="site-nav__item site-nav__expanded-item">
+              <a href="/collections/The-Friendship-Circle" class="site-nav__link site-nav__link--underline">The Friendship Circle</a>
+           </li>
+        {% endif %}
+        {% if customer.tags contains 'Stephs Southern Soul' %}
+           <li class="site-nav__item site-nav__expanded-item">
+              <a href="/collections/Stephs-Southern-Soul" class="site-nav__link site-nav__link--underline">Stephs Southern Soul</a>
+           </li>
+        {% endif %}
+       {% if customer.tags contains 'Melt Ice Creams' %}
+           <li class="site-nav__item site-nav__expanded-item">
+              <a href="/collections/Melt-Ice-Creams" class="site-nav__link site-nav__link--underline">Melt Ice Creams</a>
+           </li>
+        {% endif %}
+       {% if customer.tags contains 'Aubi and Ramsa' %}
+           <li class="site-nav__item site-nav__expanded-item">
+              <a href="/collections/Aubi-and-Ramsa" class="site-nav__link site-nav__link--underline">Aubi and Ramsa</a>
+           </li>
+        {% endif %}
+       {% if customer.tags contains 'cioccolato' %}
+           <li class="site-nav__item site-nav__expanded-item">
+              <a href="/collections/gelato-cioccolato" class="site-nav__link site-nav__link--underline">Gelato & Cioccolato</a>
+           </li>
+        {% endif %}
+     {% endif %}
+  {% endif %}
+</ul>

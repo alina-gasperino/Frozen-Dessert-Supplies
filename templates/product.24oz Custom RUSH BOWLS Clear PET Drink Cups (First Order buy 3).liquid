@@ -1,0 +1,11 @@
+{%if customer.tags contains 'Rush Bowls'%}
+
+{% section 'product-template' %}
+{% section 'product-recommendations' %}
+
+{%else%}
+
+{{ pages.no-access.content }}
+
+
+{%endif%}

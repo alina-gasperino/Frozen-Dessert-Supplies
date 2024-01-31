@@ -1,0 +1,69 @@
+{
+  "sections": {
+    "main": {
+      "type": "article-template",
+      "settings": {
+        "image_hero": false,
+        "blog_show_tags": false,
+        "blog_show_date": false,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "social_sharing_blog": true
+      }
+    },
+    "26a3690d-5ede-4ede-b454-33486606febb": {
+      "type": "faq",
+      "blocks": {
+        "template--14683521843235__26a3690d-5ede-4ede-b454-33486606febb-question-1": {
+          "type": "question",
+          "settings": {
+            "title": "How many type of desserts should you have at a baby shower?",
+            "text": "<p>The number of desserts to have at a baby shower can vary based on the size of the guest list, personal preferences, and the overall menu. As a general guideline, consider offering a variety to cater to different tastes. A selection of 3 to 5 different desserts can provide a well-rounded sweet experience for guests. This might include a cake or cupcakes, a fruit-based option, a chocolate treat, and a couple of smaller bites like cookies or dessert shooters. Adjust the quantity based on the size of the gathering and the diversity of your chosen desserts.<\/p>"
+          }
+        },
+        "template--14683521843235__26a3690d-5ede-4ede-b454-33486606febb-question-2": {
+          "type": "question",
+          "settings": {
+            "title": "What can I do instead of cake for baby shower?",
+            "text": "<p>Opt for creative baby shower dessert alternatives such as cupcakes with cute decorations, diverse cake pops, or a dessert bar with cookies, brownies, and mini tarts. Explore elegant dessert shooters, an interactive ice cream bar, or a fruit display with a baby carriage theme. Consider macarons, mini pies, tarts, or a variety of donuts to match the baby shower theme and preferences.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--14683521843235__26a3690d-5ede-4ede-b454-33486606febb-question-1",
+        "template--14683521843235__26a3690d-5ede-4ede-b454-33486606febb-question-2"
+      ],
+      "custom_css": [
+        "header {margin-top: auto; margin-bottom: auto; margin-right: 1rem; margin-left: -1rem;}",
+        "@media (min-width: 769px) {div {display: grid; grid-template-rows: auto auto; grid-template-columns: auto auto; column-gap: 2rem; } div > header {grid-column: 1 \/ -1; margin-bottom: 1rem; }}",
+        "div > div {width: 100%; margin-right: 0;}",
+        "div > div > div > button > :nth-child(2) {display: block; width: 14rem;}",
+        "div > div > div {display: flex; flex-direction: column;}",
+        "div > div > div > div {width: 100%; padding-left: 0.5rem;}"
+      ],
+      "settings": {
+        "title": "FAQs"
+      }
+    },
+    "blog-posts": {
+      "type": "blog-posts",
+      "settings": {
+        "title": "You may also like",
+        "blog": "news",
+        "post_limit": 3,
+        "blog_show_tags": false,
+        "blog_show_date": true,
+        "blog_show_comments": false,
+        "blog_show_author": false,
+        "view_all": true,
+        "blog_image_size": "wide",
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "26a3690d-5ede-4ede-b454-33486606febb",
+    "blog-posts"
+  ]
+}

@@ -1,0 +1,46 @@
+<div style="width: 100%; height: 100%; position: relative; background: white">
+    <!-- Product Title -->
+    <div style="...">{{ product.title }}</div>
+
+    <!-- Product Options (Color, Size, etc.) -->
+    {% for option in product.options %}
+        <div style="...">
+            <span style="...">{{ option.name }}:</span>
+            {% for value in option.values %}
+                <span style="...">{{ value }}</span>
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+    <!-- Main Product Image -->
+    <img loading="lazy" style="..." src="{{ product.featured_image | img_url: 'xlarge' }}" />
+
+    <!-- Additional Product Images -->
+    {% for image in product.images %}
+        <img loading="lazy" style="..." src="{{ image.src | img_url: '50x50' }}" />
+    {% endfor %}
+
+    <!-- Product Description -->
+    <div style="...">
+        <div style="...">Description</div>
+        <div style="...">{{ product.description | escape }}</div>
+    </div>
+
+    <!-- Add to Cart Button -->
+    <form action="/cart/add" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+        <input type="submit" value="Add to Cart" />
+    </form>
+
+    <!-- Customer Reviews (Assuming a review system is integrated) -->
+    <div style="...">
+        <div style="...">Customer Reviews</div>
+        {% for review in product.reviews %}
+            <div style="...">
+                {{ review.content }}
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Other static content from your HTML goes here -->
+</div>

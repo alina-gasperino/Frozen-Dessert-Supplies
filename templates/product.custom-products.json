@@ -1,0 +1,228 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "dropdown",
+            "color_swatches": false
+          }
+        },
+        "sales_point": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "package",
+            "text": "Current Fastest Lead Time: 6 weeks"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "disabled": true,
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "dc348c21-78bf-4bb9-bd70-8b86411df3ed": {
+          "type": "separator",
+          "settings": {}
+        },
+        "a9bead06-f2a5-48d8-a502-0aefd8fab7ea": {
+          "type": "custom",
+          "settings": {
+            "code": "<h4>Schedule a free consultation:<\/h4>"
+          }
+        },
+        "141fbc4e-4c3c-4908-a1a1-b14246598a4b": {
+          "type": "custom",
+          "settings": {
+            "code": "<!--[if lte IE 8]>\n<script charset=\"utf-8\" type=\"text\/javascript\" src=\"\/\/js.hsforms.net\/forms\/v2-legacy.js\"><\/script>\n<![endif]-->\n<script charset=\"utf-8\" type=\"text\/javascript\" src=\"\/\/js.hsforms.net\/forms\/v2.js\"><\/script>\n<script>\n  hbspt.forms.create({\n\tregion: \"na1\",\n\tportalId: \"21466193\",\n\tformId: \"6ad2101c-9b55-4b3d-83e5-970bd2d7c4e2\"\n});\n<\/script>"
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "disabled": true,
+          "settings": {
+            "title": "Get a Quote",
+            "content": "",
+            "page": "custom-printing-form"
+          }
+        }
+      },
+      "block_order": [
+        "price",
+        "separator",
+        "variant_picker",
+        "sales_point",
+        "buy_buttons",
+        "description",
+        "dc348c21-78bf-4bb9-bd70-8b86411df3ed",
+        "a9bead06-f2a5-48d8-a502-0aefd8fab7ea",
+        "141fbc4e-4c3c-4908-a1a1-b14246598a4b",
+        "tab"
+      ],
+      "settings": {
+        "sku_enable": true,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": false,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": false,
+        "mobile_layout": "full",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "1631647792c1c9d486": {
+      "type": "advanced-content",
+      "blocks": {
+        "1631647792c1c9d486-1": {
+          "type": "liquid",
+          "settings": {
+            "code": "<p><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0311\/7901\/4281\/files\/corbin_icons_70px-09.png?v=1631650250\" alt=\"\" style=\"display: block; margin-left: auto; margin-right: auto;\" \/><\/p>\n<h4 style=\"text-align: center;\"><span style=\"color: #26bfcb;\">COMPLIMENTARY DESIGN<\/span><\/h4>\n<div style=\"text-align: center;\"><\/div>",
+            "width": "33%",
+            "alignment": "center"
+          }
+        },
+        "e5627ae8-807f-4070-97e7-3380f50feb3f": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0311\/7901\/4281\/files\/corbin_icons_70px-08.png?v=1631650768\" alt=\"\" style=\"display: block; margin-left: auto; margin-right: auto;\" \/><\/div>\n<h4 style=\"text-align: center;\"><span style=\"color: #26bfcb;\">Storage Solutions<\/span><\/h4>",
+            "width": "33%",
+            "alignment": "center"
+          }
+        },
+        "92ffa65d-db56-4a5b-bfdf-cb155022a202": {
+          "type": "liquid",
+          "settings": {
+            "code": "<div><img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0268\/4508\/5731\/files\/corbin_icons_70px-10.png?v=1632341496\" alt=\"\" style=\"display: block; margin-left: auto; margin-right: auto;\" \/><\/div>\n<h4 style=\"text-align: center;\"><span style=\"color: #26bfcb;\">LOW MINIMUMS<\/span><\/h4>",
+            "width": "33%",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "1631647792c1c9d486-1",
+        "e5627ae8-807f-4070-97e7-3380f50feb3f",
+        "92ffa65d-db56-4a5b-bfdf-cb155022a202"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "background-image-text": {
+      "type": "background-image-text",
+      "disabled": true,
+      "settings": {
+        "subtitle": "",
+        "title": "",
+        "text": "",
+        "button_label": "",
+        "button_link": "",
+        "layout": "left",
+        "height": 550,
+        "framed": false,
+        "parallax": false
+      }
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonials-1": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"These people are AMAZING! I can’t say enough positive things about my experience! My custom cups came out beautiful and they are so great with communication! I highly recommend!\"<\/p>",
+            "author": "Gabriella T.",
+            "author_info": "Scoops On Wheels"
+          }
+        },
+        "testimonials-0": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"Working with Frozen Dessert Supplies was one of the best vendor experiences I have ever had. In a process that could normally take months, the team of designers worked so quickly to get me proofs and were always happy to make even the smallest of adjustments to make sure we were 100% happy with our design. We are thrilled with our products, design, cost, and customer service from Frozen Dessert Supplies\/Hot Cup Factory. I would recommend them to anyone needing a vendor for cafe or restaurant products. We are proud to support this company!\"<\/p>",
+            "author": "Shawnae C.",
+            "author_info": "Whisk Coffee and Wine Bar"
+          }
+        },
+        "testimonials-2": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"The talented design team at Frozen Dessert Supplies is able to produce any idea you give them, along with adding professional ideas of their own that enhance the appearance of your custom product.  You will never be waiting for a response as the sales department was always quick and efficient with communication, making adjustments to my design, and getting my order placed.  Consider this for your next custom order!!! You will not be disappointed!\"<\/p>",
+            "author": "Joan M.",
+            "author_info": "Miyauchi Snack Bar"
+          }
+        }
+      },
+      "block_order": [
+        "testimonials-1",
+        "testimonials-0",
+        "testimonials-2"
+      ],
+      "settings": {
+        "title": "Testimonials",
+        "align_text": "center",
+        "round_images": false,
+        "color_background": "#ffffff",
+        "color_text": "#454449"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "product_recommendations_heading": "You may also like",
+        "related_count": 5
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "sub",
+    "1631647792c1c9d486",
+    "background-image-text",
+    "testimonials",
+    "product-recommendations",
+    "recently-viewed",
+    "collection-return"
+  ]
+}

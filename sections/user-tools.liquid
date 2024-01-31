@@ -1,0 +1,23 @@
+<div id="user-tools-page" class="page-width page-content">
+    {%- comment -%} {%if customer.tags contains 'User Tools Crispy Cones'%} {%endif%} // REMOVE THE ENDIF FROM THIS LINE {%- endcomment -%}
+ 
+       <div id="user-tools-root"></div>
+       <script src="{{ 'user-tools.bundle.min.js' | asset_url }}"></script>
+
+   {%- comment -%} LIMIT THE PAGE ACCESS FOR WHEN NEEDEED.  {%- endcomment -%}
+ 
+    {%- comment -%} {%else%} 
+ 
+         <div class="grid">
+          <div class="grid__item medium-up--three-quarters medium-up--push-one-eighth">
+             <div class="rte rte--nomargin">
+                {{ pages.no-access.content }}
+             </div>
+          </div>
+       </div>
+ 
+    {%endif%} 
+    
+    {%- endcomment -%}
+ 
+ </div>
