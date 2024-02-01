@@ -1,4 +1,4 @@
-<script type="text/javascript" src="https://edge.personalizer.io/storefront/2.0.0/js/shopify/storefront.min.js?key=eaiou-nre1l5cph3h1er3a5ekb-5gdpu&shop=frozendessertsupplies.myshopify.com"></script>
+<script type="text/javascript" src="https://edge.personalizer.io/storefront/2.0.0/js/shopify/storefront.min.js?key=tcole-zdr1vu5tqa3c1usj3cgp5m-bsgk5&shop=frozendessertsupplies.myshopify.com"></script>
 <script>
 window.LimeSpot = window.LimeSpot === undefined ? {} : LimeSpot;{% assign t = template | prepend: '/' | append: '.' %}
 {% if t contains '/product.' %}LimeSpot.PageInfo = { Type: "Product", ReferenceIdentifier: "{{ product.id }}"};
@@ -24,13 +24,9 @@ LimeSpot.StoreInfo = { Theme: "{{ theme.name | escape }}" };
 LimeSpot.CartItems = [{{ cart_product_ids | remove_first: "," }}];
 </script>
 {% if t contains '/collection.' and collection.metafields.LimeSpot['CuratedCollectionVariation'] == "true" %}
-{%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
-{%- if disabled_by_yoast_seo -%}
 <link rel="canonical" data-owner="LimeSpot" href="https://{{ request.host }}{{ collection.metafields.LimeSpot['StartingCollectionPath'] }}">
-{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
-{%- endif -%}
 {% endif %}
 
 
 
-{% comment %}Checksum: b3f262c9d68ad924f56be4f4ee95333a{% endcomment %}
+{% comment %}Checksum: 60bd431b3d6f9d7a8c8a43586fb72a37{% endcomment %}
