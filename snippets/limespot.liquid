@@ -24,7 +24,11 @@ LimeSpot.StoreInfo = { Theme: "{{ theme.name | escape }}" };
 LimeSpot.CartItems = [{{ cart_product_ids | remove_first: "," }}];
 </script>
 {% if t contains '/collection.' and collection.metafields.LimeSpot['CuratedCollectionVariation'] == "true" %}
+{%- comment -%}Auto-disabled. Yoast plugin is taking care of Meta Tags output.{%- endcomment -%}
+{%- if disabled_by_yoast_seo -%}
 <link rel="canonical" data-owner="LimeSpot" href="https://{{ request.host }}{{ collection.metafields.LimeSpot['StartingCollectionPath'] }}">
+{%- comment -%} End Yoast auto-disable. {%- endcomment -%}
+{%- endif -%}
 {% endif %}
 
 
