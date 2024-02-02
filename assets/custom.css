@@ -182,6 +182,12 @@ span.var_val {
 }
 @media only screen and (max-width: 639px) {
 .custom-5050 .grid__item .product__main-photos .flickity-page-dots {bottom: -25px;}
+.all_benefits {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
 }
 @media only screen and (max-width: 539px) {
 .custom-5050 .product__photos--beside {padding: 10px;}
