@@ -1,0 +1,99 @@
+{%- style -%}
+    .cup-form-section {
+        padding-top: {{section.settings.desk_pad_top}}px;
+        padding-bottom: {{ section.settings.desk_pad_bottom }}px;
+        background-image: url("{{ section.settings.bg_img | img_url: '2048x' }}");
+        background-size: 100% 100%;
+    }
+{%- endstyle -%}
+<div id="custom_cup_form">
+    <div class="page-width">
+        {%- if section.settings.title != blank -%}
+            <h1 class="section-header__title">{{ section.settings.title | escape }}</h1>
+        {%- endif -%}
+        {%- if section.settings.sub_title != blank -%}
+            <h3 class="section-header__subtitle">{{ section.settings.sub_title | escape }}</h3>
+        {%- endif -%}
+        <div class="form_body">
+            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+            <script>
+            hbspt.forms.create({
+                region: "na1",
+                portalId: "21466193",
+                formId: "6ad2101c-9b55-4b3d-83e5-970bd2d7c4e2"
+            });
+            </script>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Cup Form",
+  "class": "cup-form-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Heading"
+    },
+    {
+      "id": "sub_title",
+      "type": "text",
+      "label": "Sub Title"
+    },
+    {
+      "type": "range",
+      "id": "desk_pad_top",
+      "label": "Desktop Padding Top",
+      "default": 50,
+      "min": 30,
+      "max": 120,
+      "step": 5
+    },
+    {
+        "type": "range",
+        "id": "desk_pad_bottom",
+        "label": "Desktop Padding Bottom",
+        "default": 50,
+        "min": 30,
+        "max": 120,
+        "step": 5
+    },
+    {
+        "type": "range",
+        "id": "mob_pad_top",
+        "label": "Mobile Padding Top",
+        "default": 40,
+        "min": 20,
+        "max": 120,
+        "step": 5
+    },
+    {
+        "type": "range",
+        "id": "mob_pad_bottom",
+        "label": "Mobile Padding Bottom",
+        "default": 40,
+        "min": 20,
+        "max": 120,
+        "step": 2
+    },
+    {
+        "type": "image_picker",
+        "id": "bg_img",
+        "label": "Background Image"
+      }
+  ],
+  "presets": [
+    {
+      "name": "Custom Cup Form",
+      "settings": {
+      }
+    }
+  ],
+  "disabled_on": {
+    "groups": ["footer", "header", "custom.popups"]
+  }
+}
+{% endschema %}

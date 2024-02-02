@@ -1,0 +1,144 @@
+{%- style -%}
+.why-choose {
+  background: {{ section.settings.bg_color }};
+  padding-top: {{section.settings.desk_pad_top}}px;
+  padding-bottom: {{ section.settings.desk_pad_bottom }}px;
+}
+{%- endstyle -%}
+
+<div class="page-width why_choose" data-aos="logo__animation">
+  {%- if section.settings.title != blank -%}
+    <div class="section-header">
+      <h1 class="section-header__title">{{ section.settings.title | escape }}</h1>
+    </div>
+  {%- endif -%}
+
+  {%- if section.blocks.size > 0 -%}
+    <div class="all_benefits logo-bar--{{ section.id }}">
+      {%- for block in section.blocks -%}
+        <div class="benefit__item" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            {%- render 'image-element',
+                img: block.settings.image,
+                widths: '180, 360, 540, 720',
+                classes: 'benefit__image',
+                sizeVariable: '160px',
+                fallback: '110px',
+              -%}
+          {%- else -%}
+            {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+          {% if block.settings.subtitle != blank %}
+            <h3 class="benefit_subtitle">{{ block.settings.subtitle }} </h3>
+          {% endif %}
+          {% if block.settings.description != blank %}
+            <div class="benefit_desc">{{ block.settings.description }} </div>
+          {% endif %}
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Benefits",
+  "class": "why-choose",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.logo-list.settings.title.label"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#e3fdff"
+    },
+    {
+        "type": "range",
+        "id": "desk_pad_top",
+        "label": "Desktop Padding Top",
+        "default": 50,
+        "min": 30,
+        "max": 120,
+        "step": 5
+      },
+      {
+          "type": "range",
+          "id": "desk_pad_bottom",
+          "label": "Desktop Padding Bottom",
+          "default": 50,
+          "min": 30,
+          "max": 120,
+          "step": 5
+      },
+      {
+          "type": "range",
+          "id": "mob_pad_top",
+          "label": "Mobile Padding Top",
+          "default": 40,
+          "min": 20,
+          "max": 120,
+          "step": 5
+      },
+      {
+          "type": "range",
+          "id": "mob_pad_bottom",
+          "label": "Mobile Padding Bottom",
+          "default": 40,
+          "min": 20,
+          "max": 120,
+          "step": 2
+      }
+  ],
+  "blocks": [
+    {
+      "type": "logo_image",
+      "name": "Benefit",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.logo-list.blocks.logo.settings.image.label"
+        },
+        {
+            "type": "text",
+            "id": "subtitle",
+            "label": "t:sections.logo-list.settings.title.label"
+        },
+        {
+            "type": "richtext",
+            "id": "description",
+            "label": "t:sections.text-and-image.settings.text.label",
+            "default": "<p>Pair large text with an image to tell a story, explain a detail about your product, or describe a new promotion.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Benefits",
+      "blocks": [
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        },
+        {
+          "type": "logo_image"
+        }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["footer", "header", "custom.popups"]
+  }
+}
+{% endschema %}

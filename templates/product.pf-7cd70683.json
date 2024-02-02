@@ -72,6 +72,14 @@
         "custom-class": false
       }
     },
+    "pf-7cd70683": {
+      "type": "pf-7cd70683",
+      "settings": {}
+    },
+    "pf-63c073a0": {
+      "type": "pf-63c073a0",
+      "settings": {}
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -94,6 +102,8 @@
   },
   "order": [
     "main",
+    "pf-7cd70683",
+    "pf-63c073a0",
     "product-recommendations",
     "recently-viewed",
     "collection-return"

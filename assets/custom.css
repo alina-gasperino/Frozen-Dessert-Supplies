@@ -72,6 +72,55 @@
     display: none !important;
 }
 
+.all_benefits {
+	display:flex;
+	justify-content:center;
+	text-align:center;
+	gap: 20px;
+}
+
+.benefit__image {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.benefit_subtitle {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.benefit_desc p {
+    font-size: 14px;
+}
+
+.form_body {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+h1.section-header__title {
+    text-align: center;
+}
+
+h3.section-header__subtitle {
+    text-align: center;
+    font-size: 18px;
+}
+
+product-recommendations.pro_related_products {
+    display: none;
+}
+
+body.template-product.uniqify_solid_icecream_cups product-recommendations.pro_related_products {
+    display: block;
+}
+
+.related_products .stamped-main-badge, .related_products .grid-product__price, .related_products .product-block {
+	display: none !important;
+}
 @media only screen and (max-width: 1419px) {
 .product-arrow.product-right {right: 20px !important;}
 .product-arrow.product-left {left: 115px !important;}
