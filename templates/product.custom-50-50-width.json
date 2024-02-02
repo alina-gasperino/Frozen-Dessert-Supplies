@@ -229,7 +229,7 @@
           "type": "question",
           "settings": {
             "title": "How can I become tax exempt?",
-            "text": "<p>ax exemption can be given to certain retailers.<a href=\"https:\/\/frozendessertsupplies.com\/pages\/sales-tax-exemption-info\" target=\"_self\">Read this page<\/a>to better understand if you qualify for sales tax exemption.<\/p>"
+            "text": "<p>Tax exemption can be given to certain retailers. Please follow your state's guidelines to better understand if you qualify for sales tax exemption. <a href=\"https:\/\/frozendessertsupplies.com\/pages\/sales-tax-exemption-info\" title=\"Sales Tax Exemption Info\">Click here for more information.<\/a><\/p>"
           }
         }
       },

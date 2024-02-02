@@ -121,6 +121,34 @@ body.template-product.uniqify_solid_icecream_cups product-recommendations.pro_re
 .related_products .stamped-main-badge, .related_products .grid-product__price, .related_products .product-block {
 	display: none !important;
 }
+
+.related_products_wrapper {
+    margin-top: 30px;
+}
+
+.variant-wrapper label.variant__label, .product__quantity label {
+	font-weight: 600;
+}
+
+span.var_val {
+    font-weight: 400;
+}
+
+.js-qty__wrapper {
+    border: 2px solid #25BFCC;
+    border-radius: 30px;
+	max-width: 100px;
+}
+
+.js-qty__num {
+	color: #25BFCC;
+    border: none;
+}
+
+.js-qty__adjust--minus, .js-qty__adjust--plus {
+	fill: #25BFCC;
+}
+
 @media only screen and (max-width: 1419px) {
 .product-arrow.product-right {right: 20px !important;}
 .product-arrow.product-left {left: 115px !important;}

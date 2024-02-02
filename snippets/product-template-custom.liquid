@@ -157,7 +157,8 @@
                   data-section-type="collection-grid"
                   class="related_products">
               
-                  <div class="page-width page-width--flush-small">
+                  <div class="related_products_wrapper">
+                    <h3>You May Also Like</h3>
                     <div class="grid-overflow-wrapper">
                       {%- if recommend_products -%}
                         <div class="product-recommendations-placeholder">
@@ -373,8 +374,9 @@
                       <div class="product-block" {{ block.shopify_attributes }}>
                         <div class="product__quantity">
                           {% assign qty_id = section_id | append: product.id %}
-                          <label for="Quantity-{{ qty_id }}">{{ 'products.product.quantity' | t }}</label>
+                          <label for="Quantity-{{ qty_id }}">Choose Your Case {{ 'products.product.quantity' | t }}:</label>
                           {%- render 'quantity-input', form_id: form_id, id: qty_id, qty: 1, min: 1 -%}
+                          
                         </div>
                       </div>
                     {%- when 'size_chart' -%}

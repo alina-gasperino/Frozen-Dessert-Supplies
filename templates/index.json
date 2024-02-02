@@ -191,6 +191,7 @@
         "c1043d3f-29ec-43d0-9097-6da09cdb96fc",
         "cb5ab8f1-72e5-46cc-bedc-bed29ee14a71"
       ],
+      "disabled": true,
       "custom_css": [
         ".flex-grid--template--14683523153955__eec3265c-1608-4939-8fb0-b63ea4c0934f .flex-grid--gutters {margin-left: 5px;}",
         ".type-product__label {background-color: #f06696;}"
@@ -237,7 +238,7 @@
         "blog": "news",
         "post_limit": 3,
         "blog_show_tags": false,
-        "blog_show_date": false,
+        "blog_show_date": true,
         "blog_show_comments": false,
         "blog_show_author": false,
         "view_all": false,

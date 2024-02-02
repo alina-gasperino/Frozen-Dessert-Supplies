@@ -72,6 +72,87 @@
         "custom-class": false
       }
     },
+    "benefits_teHD3n": {
+      "type": "benefits",
+      "blocks": {
+        "logo_image_NJpMRB": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Order_Samples.png",
+            "subtitle": "Order Samples",
+            "description": "<p>Feel the quality for yourself. Order a free sample, just pay for shipping.<\/p>"
+          }
+        },
+        "logo_image_DArhfr": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Free_Shipping.png",
+            "subtitle": "Free Shipping",
+            "description": "<p>Free shipping for all commercially zoned addresses within the continental U.S.<\/p>"
+          }
+        },
+        "logo_image_kr6BHq": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Customer_Service_a52dcd83-fcfc-4f69-9e65-924f30bf9f51.png",
+            "subtitle": "Customer Service",
+            "description": "<p>Our customer service team is here to help so you can have the best experience.<\/p>"
+          }
+        },
+        "logo_image_LREq6A": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Quick_Reorder.png",
+            "subtitle": "Quick Reorder",
+            "description": "<p>Tight on time? Quickly re-order from past orders when you create an account.<\/p>"
+          }
+        },
+        "logo_image_YWYmYE": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Convenient_App.png",
+            "subtitle": "Convenient App",
+            "description": "<p>Download our app to quickly browse products and start restocking.<\/p>"
+          }
+        },
+        "logo_image_YeGJBR": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Custom_Branding.png",
+            "subtitle": "Custom Branding",
+            "description": "<p>Work directly with a designer to get the personalized cups.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "logo_image_NJpMRB",
+        "logo_image_DArhfr",
+        "logo_image_kr6BHq",
+        "logo_image_LREq6A",
+        "logo_image_YWYmYE",
+        "logo_image_YeGJBR"
+      ],
+      "settings": {
+        "title": "Why Choose Frozen Dessert Supplies?",
+        "bg_color": "#e3fdff",
+        "desk_pad_top": 60,
+        "desk_pad_bottom": 60,
+        "mob_pad_top": 40,
+        "mob_pad_bottom": 40
+      }
+    },
+    "custom_cup_form_9WkAe8": {
+      "type": "custom_cup_form",
+      "settings": {
+        "title": "Want a Custom Cup?",
+        "sub_title": "Lower Minimums • Complimentary Designs • Storage Solutions",
+        "desk_pad_top": 60,
+        "desk_pad_bottom": 60,
+        "mob_pad_top": 40,
+        "mob_pad_bottom": 40,
+        "bg_img": "shopify:\/\/shop_images\/Want_a_Custom_Cup_bg.png"
+      }
+    },
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
@@ -94,6 +175,8 @@
   },
   "order": [
     "main",
+    "benefits_teHD3n",
+    "custom_cup_form_9WkAe8",
     "product-recommendations",
     "recently-viewed",
     "collection-return"
