@@ -5,6 +5,13 @@
         background-image: url("{{ section.settings.bg_img | img_url: '2048x' }}");
         background-size: 100% 100%;
     }
+    @media screen and (max-width: 500px) {
+        .cup-form-section {
+            background-image: url("{{ section.settings.mob_bg_img | img_url: '2048x' }}");
+            background-size: cover;
+            background-position: center;
+        }
+    }
 {%- endstyle -%}
 <div id="custom_cup_form">
     <div class="page-width">
@@ -67,7 +74,7 @@
         "label": "Mobile Padding Top",
         "default": 40,
         "min": 20,
-        "max": 120,
+        "max": 200,
         "step": 5
     },
     {
@@ -83,7 +90,12 @@
         "type": "image_picker",
         "id": "bg_img",
         "label": "Background Image"
-      }
+    },
+    {
+        "type": "image_picker",
+        "id": "mob_bg_img",
+        "label": "Mobile Background Image"
+    }
   ],
   "presets": [
     {

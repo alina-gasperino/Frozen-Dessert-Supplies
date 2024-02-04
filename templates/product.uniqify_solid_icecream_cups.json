@@ -148,9 +148,10 @@
         "sub_title": "Lower Minimums • Complimentary Designs • Storage Solutions",
         "desk_pad_top": 60,
         "desk_pad_bottom": 60,
-        "mob_pad_top": 40,
+        "mob_pad_top": 120,
         "mob_pad_bottom": 40,
-        "bg_img": "shopify:\/\/shop_images\/Want_a_Custom_Cup_bg.png"
+        "bg_img": "shopify:\/\/shop_images\/Want_a_Custom_Cup_bg.png",
+        "mob_bg_img": "shopify:\/\/shop_images\/Want_a_Custom_Cup_bg_mob.png"
       }
     },
     "product-recommendations": {
