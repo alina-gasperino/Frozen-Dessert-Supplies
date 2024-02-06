@@ -85,6 +85,16 @@
       endif
     endfor
   -%}
+
+  {%- liquid
+    assign recommend_products = true
+  
+    if recommendations.products and recommendations.products_count > 0
+      assign related_collection = recommendations
+    endif
+  
+    assign number_of_products = 3
+  -%}
   
   <div
     id="ProductSection-{{ section_id }}-{{ product.id }}"
@@ -130,19 +140,9 @@
                 mobile_layout: mobile_layout,
               -%}
   
-              {%- liquid
-                assign recommend_products = true
-              
-                if recommendations.products and recommendations.products_count > 0
-                  assign related_collection = recommendations
-                endif
-              
-                assign number_of_products = 3
-              -%}
-  
               <product-recommendations
                 id="Recommendations-{{ section.id }}"
-                class="pro_related_products"
+                class="pro_related_products desktop"
                 data-section-id="{{ section.id }}"
                 data-section-type="product-recommendations"
                 data-enable="{{ recommend_products }}"
@@ -166,7 +166,7 @@
                             This content is visually hidden and replaced when recommended products show up
                           {% endcomment %}
                           <div class="grid grid--uniform visually-invisible" aria-hidden="true">
-                            {%- render 'product-grid-item',
+                            {%- render 'product-grid-item-recommended',
                               product: product,
                               quick_shop_enable: false
                             -%}
@@ -178,7 +178,7 @@
                           <div class="grid grid--uniform" data-aos="overflow__animation">
                             {%- for product in related_collection.products limit: number_of_products -%}
                               {% comment %} On smaller screen sizes, 39vw is used for grid items in the CSS {% endcomment %}
-                              {%- render 'product-grid-item',
+                              {%- render 'product-grid-item-recommended',
                                 product: product,
                                 per_row: 3,
                                 quick_shop_enable: false,
@@ -375,8 +375,10 @@
                         <div class="product__quantity">
                           {% assign qty_id = section_id | append: product.id %}
                           <label for="Quantity-{{ qty_id }}">Choose Your Case {{ 'products.product.quantity' | t }}:</label>
-                          {%- render 'quantity-input', form_id: form_id, id: qty_id, qty: 1, min: 1 -%}
-                          
+                          <div class="qty_cart">
+                            {%- render 'quantity-input', form_id: form_id, id: qty_id, qty: 1, min: 1 -%}
+                            <button class="btn btn--full add-to-cart-2">Add to cart</button>
+                          </div>
                         </div>
                       </div>
                     {%- when 'size_chart' -%}
@@ -991,9 +993,9 @@
                 {% endif %}
   
                 {%- comment -%}Yoast SEO schema control block: start.{%- endcomment -%}
-  {%- assign yoast_seo_settings = shop.metafields.yoast_seo.settings.value | default: shop.metafields.yoast_seo.settings -%}
-  {%- if disabled_by_yoast_seo or yoast_seo_settings.schema.useTheme.schema or yoast_seo_settings.schema.useTheme.product -%}
-  <script type="application/ld+json">
+          {%- assign yoast_seo_settings = shop.metafields.yoast_seo.settings.value | default: shop.metafields.yoast_seo.settings -%}
+          {%- if disabled_by_yoast_seo or yoast_seo_settings.schema.useTheme.schema or yoast_seo_settings.schema.useTheme.product -%}
+          <script type="application/ld+json">
                   {
                     "@context": "http://schema.org/",
                     "@type": "Product",
@@ -1014,9 +1016,9 @@
   
                 <!-- Google Review snippet added to show the reviews on Google Searches for our Products start -->
                 {%- comment -%}Yoast SEO schema control block: start.{%- endcomment -%}
-  {%- assign yoast_seo_settings = shop.metafields.yoast_seo.settings.value | default: shop.metafields.yoast_seo.settings -%}
-  {%- if disabled_by_yoast_seo or yoast_seo_settings.schema.useTheme.schema or yoast_seo_settings.schema.useTheme.product -%}
-  <script type="application/ld+json">
+        {%- assign yoast_seo_settings = shop.metafields.yoast_seo.settings.value | default: shop.metafields.yoast_seo.settings -%}
+        {%- if disabled_by_yoast_seo or yoast_seo_settings.schema.useTheme.schema or yoast_seo_settings.schema.useTheme.product -%}
+        <script type="application/ld+json">
                   {
                     "@context": "http://schema.org/",
                     "@type": "Product",
@@ -1094,6 +1096,58 @@
         </div>
       </div>
     </div>
+    <product-recommendations
+      id="Recommendations-{{ section.id }}"
+      class="pro_related_products mobile"
+      data-section-id="{{ section.id }}"
+      data-section-type="product-recommendations"
+      data-enable="{{ recommend_products }}"
+      data-product-id="{{ product.id }}"
+      data-intent="related"
+      data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ number_of_products }}"
+      data-limit="{{ number_of_products }}">
+    
+      <div
+        data-section-id="{{ product.id }}"
+        data-subsection
+        data-section-type="collection-grid"
+        class="related_products">
+    
+        <div class="related_products_wrapper">
+          <h3>You May Also Like</h3>
+          <div class="grid-overflow-wrapper">
+            {%- if recommend_products -%}
+              <div class="product-recommendations-placeholder">
+                {% comment %}
+                  This content is visually hidden and replaced when recommended products show up
+                {% endcomment %}
+                <div class="grid grid--uniform visually-invisible" aria-hidden="true">
+                  {%- render 'product-grid-item-recommended',
+                    product: product,
+                    quick_shop_enable: false
+                  -%}
+                </div>
+              </div>
+            {%- endif -%}
+            {%- if related_collection.products_count > 0 -%}
+              <div class="product-recommendations page-width">
+                <div class="grid grid--uniform" data-aos="overflow__animation">
+                  {%- for product in related_collection.products limit: number_of_products -%}
+                    {% comment %} On smaller screen sizes, 39vw is used for grid items in the CSS {% endcomment %}
+                    {%- render 'product-grid-item-recommended',
+                      product: product,
+                      per_row: 3,
+                      quick_shop_enable: false,
+                      fallback: '39vw',
+                    -%}
+                  {%- endfor -%}
+                </div>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </product-recommendations>    
   </div>
   
   {% capture 'meta_data' %}

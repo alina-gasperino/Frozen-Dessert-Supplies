@@ -117,6 +117,9 @@ product-recommendations.pro_related_products {
 body.template-product.uniqify_solid_icecream_cups product-recommendations.pro_related_products {
     display: block;
 }
+body.template-product.uniqify_solid_icecream_cups product-recommendations.pro_related_products.mobile {
+    display: none;
+}
 
 .related_products .stamped-main-badge, .related_products .grid-product__price, .related_products .product-block {
 	display: none !important;
@@ -147,6 +150,19 @@ span.var_val {
 
 .js-qty__adjust--minus, .js-qty__adjust--plus {
 	fill: #25BFCC;
+}
+
+.qty_cart {
+    display: flex;
+    gap: 20px;
+}
+
+.uniqify_solid_icecream_cups .product-single__form {
+    display: none;
+}
+
+.collapsible-trigger-btn--borders+.collapsible-content .collapsible-content__inner {
+    border: none;
 }
 
 @media only screen and (max-width: 1419px) {
@@ -187,6 +203,17 @@ span.var_val {
     text-align: center;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+body.template-product.uniqify_solid_icecream_cups product-recommendations.pro_related_products.mobile {
+    display: block;
+    padding: 0 17px;
+    margin-bottom: 30px;
+}
+body.template-product.uniqify_solid_icecream_cups product-recommendations.pro_related_products.desktop {
+    display: none;
+}
+.related_products_wrapper {
+    margin-top: 0;
 }
 }
 @media only screen and (max-width: 539px) {

@@ -61,7 +61,7 @@
       "settings": {
         "sku_enable": true,
         "image_position": "left",
-        "image_size": "large",
+        "image_size": "medium",
         "product_zoom_enable": true,
         "thumbnail_position": "beside",
         "thumbnail_height": "flexible",
@@ -156,6 +156,7 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "product_recommendations_heading": "You may also like",
         "related_count": 3,
