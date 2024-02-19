@@ -36,7 +36,7 @@
           data-variant-color-label
           data-index="{{ forloop.index0 }}"
           data-option-index="{{ color_option_index }}">
-          {{ option.selected_value }}
+          {{ option.selected_value | split: " " | first }}
         </span>
       </span>
     {%- endif -%}

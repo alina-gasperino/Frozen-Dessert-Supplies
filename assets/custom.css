@@ -146,6 +146,7 @@ span.var_val {
 .js-qty__num {
 	color: #25BFCC;
     border: none;
+    padding: 8px 10px;
 }
 
 .js-qty__adjust--minus, .js-qty__adjust--plus {
@@ -165,6 +166,84 @@ span.var_val {
     border: none;
 }
 
+.stamped-header {
+    position: relative;
+}
+
+.stamped-summary-actions {
+    display: inline;
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+.stamped-fa-star {
+    color: #000;
+}
+
+.stamped-header-title {
+    font-size: 32px;
+    margin: 0 0 30px;
+    width: 100%;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    font-family: "Avenir Next";
+}
+
+.stamped-summary-actions-newreview {
+    font-size: 16px;
+    color: #25BFCC;
+    border: 1px solid #25BFCC;
+    border-radius: 30px;
+}
+.stamped-reviews-filter[data-show-filters=part], .stamped-tab-container, .stamped-container .stamped-review-image {
+    display: none;
+}
+[data-widget-style=profile] .stamped-review:first-child {
+    margin-top: 0 !important;
+}
+[data-widget-style=profile] .stamped-review {
+    border: none;
+    border-bottom: solid 1px #d0d0d0;
+}
+
+#stamped-main-widget [data-widget-style=profile] div.stamped-review-product {
+    border-top: none;
+}
+[data-widget-style=profile] .stamped-review>.stamped-review-content {
+    border-left: none;
+    min-height: auto;
+}
+
+[data-widget-style=profile] .stamped-header-left {
+    width: 45%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+}
+
+[data-widget-style=profile] .stamped-header-right {
+    display: none;
+}
+
+[data-widget-style=profile] .stamped-summary {
+    border: none;
+}
+
+[data-widget-style=profile] .stamped-summary-caption {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 0;
+}
+
+[data-widget-style=profile] .stamped-summary-text-1 {
+    font-size: 55px!important;
+    color: #000;
+    background: transparent;
+    line-height: 1.3;
+}
 @media only screen and (max-width: 1419px) {
 .product-arrow.product-right {right: 20px !important;}
 .product-arrow.product-left {left: 115px !important;}
@@ -214,6 +293,12 @@ body.template-product.uniqify_solid_icecream_cups product-recommendations.pro_re
 }
 .related_products_wrapper {
     margin-top: 0;
+}
+[data-widget-style=profile] .stamped-header-left {
+    width: 100%;
+}
+.stamped-summary-actions {
+    position: initial;
 }
 }
 @media only screen and (max-width: 539px) {

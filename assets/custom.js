@@ -7,6 +7,6 @@ $(document).ready(function () {
     })
 
     $(".add-to-cart-2").click(function() {
-        $(".product-single__form .btn.btn--full.add-to-cart").click()
+        $(".single_item_add .product-single__form .btn.btn--full.add-to-cart").click()
     })
 });
